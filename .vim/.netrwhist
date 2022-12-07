@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/Users/aozora/.vim/bundles/.cache/init.vim'
 let g:netrw_dirhist_6='/Users/aozora/.vim/bundles/repos/github.com/bronson'
 let g:netrw_dirhist_5='/Users/aozora/.vim/bundles/repos/github.com'
 let g:netrw_dirhist_4='/Users/aozora/Applications'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_1='/Users/aozora/Desktop/diary'
 let g:netrw_dirhist_0='/'
 let g:netrw_dirhist_9='/Users'
 let g:netrw_dirhist_8='/Users/aozora'
-let g:netrw_dirhist_7='/Users/aozora/Desktop'
