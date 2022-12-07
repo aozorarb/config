@@ -1,0 +1,6 @@
+[[plugins]]
+repo = 'othree/yajs.vim'
+[[plugins]]
+repo = "puremourning/vimspector"
+on_ft = ["c", "c++", "ruby"]
+build = "./install_gadget.py --all"

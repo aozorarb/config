@@ -1,0 +1,522 @@
+*ddu-ui-ff.txt*	Standard UI for ddu.vim
+
+Author: Shougo <Shougo.Matsu at gmail.com>
+License: MIT license
+
+CONTENTS					*ddu-ui-ff-contents*
+
+Introduction		|ddu-ui-ff-introduction|
+Install			|ddu-ui-ff-install|
+Interface		|ddu-ui-ff-interface|
+  Functions		  |ddu-ui-ff-functions|
+  Actions		  |ddu-ui-ff-actions|
+  Params		  |ddu-ui-ff-params|
+Examples		|ddu-ui-ff-examples|
+FAQ			|ddu-ui-ff-faq|
+Compatibility		|ddu-ui-ff-compatibility|
+
+
+==============================================================================
+INTRODUCTION					*ddu-ui-ff-introduction*
+
+This UI is standard fuzzy finder.
+
+
+==============================================================================
+INSTALL						*ddu-ui-ff-install*
+
+Please install both "ddu.vim" and "denops.vim".
+
+https://github.com/Shougo/ddu.vim
+https://github.com/vim-denops/denops.vim
+
+
+==============================================================================
+INTERFACE					*ddu-ui-ff-interface*
+
+
+------------------------------------------------------------------------------
+FUNCTIONS					*ddu-ui-ff-functions*
+
+						*ddu#ui#ff#close()*
+ddu#ui#ff#close()
+		Close the current window and move to parent UI window.
+
+						*ddu#ui#ff#do_action()*
+ddu#ui#ff#do_action({action-name}[, {params}])
+		Fire {action-name} action with {params}.  You can find the
+		actions list in |ddu-ui-ff-actions|.
+		{args} behavior depends on {action-name}.
+		Note: It can be called in the filter window or UI window.
+
+						*ddu#ui#ff#multi_actions()*
+ddu#ui#ff#multi_actions([{action-name1}[, {params1}], ...])
+		Fire multiple actions.
+
+		Example: >
+
+		nnoremap <buffer> c
+		\ <Cmd>call ddu#ui#ff#multi_actions([
+		\ ['itemAction', {'name': 'copy'}],
+		\ ['clearSelectAllItems'],
+		\ ])<CR>
+<
+						*ddu#ui#ff#execute()*
+ddu#ui#ff#execute({command})
+		Execute {command} in the UI window.
+
+------------------------------------------------------------------------------
+ACTIONS						*ddu-ui-ff-actions*
+
+					*ddu-ui-ff-action-chooseAction*
+chooseAction
+		Choose and fire the action.
+
+		Note: "ddu-source-action" is required.
+		https://github.com/Shougo/ddu-source-action
+
+					*ddu-ui-ff-action-clearSelectAllItems*
+clearSelectAllItems
+		Clear all selected items.
+
+						*ddu-ui-ff-action-itemAction*
+itemAction
+		params:
+			{name}: action name
+			{params}: action params dictionary
+
+		Close the UI window and fire {name} action for items.
+		You can find the actions list in item's kind documentation.
+		If {name} is empty, "default" will be used.
+
+		Note: You cannot mix multiple kinds/sources.
+
+					*ddu-ui-ff-action-openFilterWindow*
+openFilterWindow
+		Open the filter window.
+
+					*ddu-ui-ff-action-preview*
+preview
+		params:
+			{syntaxLimitChars}: 	Max number of chars to apply
+						syntax to previewed contents.
+						(Default: 200000)
+
+			The remaining params are passed to |ddu-kinds|.
+			See also |ddu-kind-attribute-getPreviewer| and kinds
+			documentation.
+
+		Preview the item in preview window.
+
+						*ddu-ui-ff-action-quit*
+quit
+		Quit the UI window.
+
+					*ddu-ui-ff-action-refreshItems*
+refreshItems
+		Refresh the items.
+
+					*ddu-ui-ff-action-toggleAllItems*
+toggleAllItems
+		Toggle selected state for the all items.
+
+					*ddu-ui-ff-action-toggleSelectItem*
+toggleSelectItem
+		Toggle selected state for cursor item.
+
+					*ddu-ui-ff-action-updateOptions*
+updateOptions
+		params:
+			{option-name}: option name and value
+
+		Update current options and redraw the UI.
+		Refer to |ddu-options| about options.
+
+==============================================================================
+PARAMS						*ddu-ui-ff-params*
+
+				    	*ddu-ui-ff-param-autoAction*
+autoAction	(dictionary)
+		Action executed when the cursor is moved.
+		It has the following keys.
+
+		name				(string)
+		Action name
+
+		params				(dictionary)	(Optional)
+		Action params
+
+		Default: {}
+
+				    	*ddu-ui-ff-param-autoResize*
+autoResize	(boolean)
+		Auto resize the window height automatically.
+
+		Default: v:false
+
+						*ddu-ui-ff-param-cursorPos*
+cursorPos	(number)
+		Select {number} candidate.
+
+		Default: 0
+
+				    	*ddu-ui-ff-param-displaySourceName*
+displaySourceName	(string)
+		Display source name in the buffer. Following values are
+		available:
+
+		"long": display full source name
+		"short": display shorter source name
+		"no": does not display
+
+		Default: "no"
+
+			    	*ddu-ui-ff-param-floatingBorder*
+floatingBorder		(string | list)
+		Specify the style of window border if |ddu-ui-ff-param-split|
+		is "floating".
+		See |nvim_open_win()| for the detail.
+		Note: It is neovim only.
+
+		Default: "none"
+
+			    	*ddu-ui-ff-param-filterFloatingPosition*
+filterFloatingPosition	(string)
+		Specify the filter floating window position as {position}.
+
+		If {position} is set to "bottom", the filter will be displayed
+		at the bottom.
+		If {position} is "top", the filter will be displayed at the
+		top.
+
+		Note: To use it, you need to use neovim and
+		|ddu-ui-ff-param-filterSplitDirection| must be "floating".
+
+		Default: "bottom"
+
+				    	*ddu-ui-ff-param-filterSplitDirection*
+filterSplitDirection	(string)
+		Specify the filter window direction as {direction}.
+
+		When {direction} is "floating", the filter uses neovim
+		floating window. If statusline is at the bottom, the filter
+		overwrites statusline. Otherwise, it is located one line below
+		statusline.
+
+		Note: To use "floating", you need to use neovim.
+
+		Default: "botright"
+
+				    	*ddu-ui-ff-param-filterUpdateTime*
+filterUpdateTime	(number)
+		Specify the update time in the filter window.
+		If it is less than equal 0, the feature will be disabled.
+
+		Default: 0
+
+				    	*ddu-ui-ff-param-highlights*
+highlights	(dictionary)
+		It specifies ddu-ui-ff buffer highlights.
+		It can contain following keys
+
+		floating			(string)
+		Specify floating window background highlight.
+		Default: "NormalFloat"
+
+		prompt				(string)
+		Specify narrowing text highlight.
+		Default: "Special"
+
+		selected			(string)
+		Specify selected item highlight.
+		Default: "Statement"
+
+		Default: {}
+
+				    		*ddu-ui-ff-param-ignoreEmpty*
+ignoreEmpty	(boolean)
+		Don't open the UI window if the items are empty.
+
+		Default: v:false
+
+						*ddu-ui-ff-param-previewCol*
+previewCol	(number)
+		Set the column position of the preview window if
+		|ddu-ui-ff-param-previewFloating| is v:true.
+
+		Default: 0
+
+					*ddu-ui-ff-param-previewFloating*
+previewFloating	(boolean)
+		Use floating window in |ddu-ui-ff-action-preview|.
+
+		Default: v:false
+
+			    	*ddu-ui-ff-param-previewFloatingBorder*
+previewFloatingBorder		(string | list)
+		Specify the style of the preview window border if
+		|ddu-ui-ff-param-previewFloating| is v:true.
+		See |nvim_open_win()| for the detail.
+		Note: It is neovim only.
+
+		Default: "none"
+
+					*ddu-ui-ff-param-previewHeight*
+previewHeight	(number)
+		Set the height of the |preview-window| in
+		|ddu-ui-ff-action-preview|.
+		If |ddu-ui-ff-param-previewFloating|, set the height of the
+		floating window.
+
+		Default: 10
+
+						*ddu-ui-ff-param-previewRow*
+previewRow	(number)
+		Set the row position of the preview window if
+		|ddu-ui-ff-param-previewFloating| is v:true.
+
+		Default: 0
+
+					*ddu-ui-ff-param-previewVertical*
+previewVertical	(boolean)
+		Use vertical preview instead of horizontal preview in
+		|ddu-ui-ff-action-preview|.
+
+		Default: v:false
+
+						*ddu-ui-ff-param-previewWidth*
+previewWidth	(number)
+		Set the width of the |preview-window| in
+		|ddu-ui-ff-action-preview|.
+		If |ddu-ui-ff-param-previewFloating|, set the width of the
+		floating window.
+
+		Default: 40
+
+				    		*ddu-ui-ff-param-prompt*
+prompt		(string)
+		Specify the prompt in the filter window.
+		Note: It must be one or two width characters.
+
+		Default: ""
+
+				    		*ddu-ui-ff-param-reversed*
+reversed	(boolean)
+		Display the items in reversed order.
+		Note: It may increase screen flicker.  Because the cursor must
+		be moved if you narrowing text.
+
+		Default: v:false
+
+				    		*ddu-ui-ff-param-split*
+split		(string)
+		Specify split mode. Following values are available:
+
+		"horizontal": horizontal split
+		"vertical": vertical split
+		"floating": use neovim floating window feature
+		"no": no split
+
+		Default: "horizontal"
+
+				    	*ddu-ui-ff-param-splitDirection*
+splitDirection	(string)
+		Specify split direction.
+
+		Default: "botright"
+
+				    		*ddu-ui-ff-param-startFilter*
+startFilter	(boolean)
+		If it is true, the filter window is opened automatically.
+
+		Default: v:false
+
+				    		*ddu-ui-ff-param-statusline*
+statusline	(boolean)
+		If it is true, the original |statusline| value is set on the
+		buffer.
+
+		Default: v:true
+
+						*ddu-ui-ff-param-winCol*
+winCol		(number)
+		Set the column position of the window if
+		|ddu-ui-ff-param-split| is "floating".
+
+		Default: &columns / 4
+
+						*ddu-ui-ff-param-winHeight*
+winHeight	(number)
+		Set the height of the window if |ddu-ui-ff-param-split| is
+		"horizontal".
+		if |ddu-ui-ff-param-split| is "floating",
+		set the height of the floating window.
+
+		Default: 20
+
+						*ddu-ui-ff-param-winRow*
+winRow		(number)
+		Set the row position of the window if |ddu-ui-ff-param-split|
+		is "floating".
+		If it is 1, the filter window position is always top.
+
+		Default: &lines / 2 - 10
+
+						*ddu-ui-ff-param-winwidth*
+winWidth	(number)
+		Set the width of the window if |ddu-ui-ff-param-split| is
+		"vertical".
+		if |ddu-ui-ff-param-split| is "floating", set the width of
+		the floating window.
+
+		Default: &columns / 2
+
+
+==============================================================================
+EXAMPLES					*ddu-ui-ff-examples*
+>
+	call ddu#custom#patch_global({
+	    \ 'ui': 'ff',
+	    \ })
+
+	autocmd FileType ddu-ff call s:ddu_ff_my_settings()
+	function! s:ddu_ff_my_settings() abort
+	  nnoremap <buffer> <CR>
+	  \ <Cmd>call ddu#ui#ff#do_action('itemAction')<CR>
+	  nnoremap <buffer> <Space>
+	  \ <Cmd>call ddu#ui#ff#do_action('toggleSelectItem')<CR>
+	  nnoremap <buffer> i
+	  \ <Cmd>call ddu#ui#ff#do_action('openFilterWindow')<CR>
+	  nnoremap <buffer> q
+	  \ <Cmd>call ddu#ui#ff#do_action('quit')<CR>
+	endfunction
+
+	autocmd FileType ddu-ff-filter call s:ddu_filter_my_settings()
+	function! s:ddu_filter_my_settings() abort
+	  inoremap <buffer> <CR>
+	  \ <Esc><Cmd>call ddu#ui#ff#close()<CR>
+	  nnoremap <buffer> <CR>
+	  \ <Cmd><Cmd>call ddu#ui#ff#close()<CR>
+	endfunction
+<
+
+==============================================================================
+FREQUENTLY ASKED QUESTIONS (FAQ)			*ddu-ui-ff-faq*
+
+Q: I want to change the cursor line color in the buffer.
+
+A: It uses 'cursorline' feature.
+So you can change the color by |hl-CursorLine| highlight.
+
+Q: I want to start narrowing in the first.
+
+A: Please set |ddu-ui-ff-param-startFilter|.
+
+Q: I want to call default action in the filter window.
+
+A:
+>
+	autocmd FileType ddu-filter call s:ddu_filter_my_settings()
+	function! s:ddu_filter_my_settings() abort
+	  inoremap <buffer> <CR>
+	  \ <Cmd>call ddu#ui#ff#do_action('itemAction')<CR>
+	endfunction
+<
+Q: I want to move the cursor in the filter window, while in insert mode.
+
+A: Really? It is not the Vim way to move the cursor while in insert mode. You
+must force this behaviour.
+>
+	autocmd FileType ddu-ff-filter call s:ddu_filter_my_settings()
+	function! s:ddu_filter_my_settings() abort
+	  inoremap <buffer> <C-j>
+	  \ <Cmd>call ddu#ui#ff#execute("call cursor(line('.')+1,0)")<CR>
+	  inoremap <buffer> <C-k>
+	  \ <Cmd>call ddu#ui#ff#execute("call cursor(line('.')-1,0)")<CR>
+	endfunction
+<
+Q: I want to define |ddu-option-name| depend key mappings.
+
+A: You can use "b:ddu_ui_name".
+>
+	autocmd FileType ddu-ff call s:ddu_ff_my_settings()
+	function! s:ddu_ff_my_settings() abort
+	  if b:ddu_ui_name ==# 'foo'
+	    nnoremap <buffer> e
+	    \ <Cmd>call ddu#ui#ff#do_action(
+	    \ 'itemAction', {'name': 'edit'})<CR>
+	  endif
+	endfunction
+	autocmd FileType ddu-ff-filter call s:ddu_filter_my_settings()
+	function! s:ddu_filter_my_settings() abort
+	  if b:ddu_ui_name ==# 'foo'
+	    nnoremap <buffer> <CR>
+	    \ <Cmd>call ddu#ui#ff#do_action('itemAction')<CR>
+	  endif
+	endfunction
+<
+
+Q: I want to pass params to the action when |ddu-ui-ff-action-chooseAction|.
+
+A: You can pass params like this.
+>
+	autocmd FileType ddu-ff call s:ddu_ff_my_settings()
+	function! s:ddu_ff_my_settings() abort
+	  nnoremap <buffer> E
+	  \ <Cmd>call ddu#ui#ff#do_action('itemAction',
+	  \ {'params': eval(input('params: '))})<CR>
+	endfunction
+<
+Q: I want to use Vim syntax highlight in the buffer.
+
+A: Please use |Syntax| autocmd.  |FileType| autocmd cannot change syntax
+highlights.  |Syntax| autocmd must be called in |FileType| autocmd. >
+Or you can use "syntax/ddu-ff.vim" file instead.
+>
+	autocmd FileType ddu-ff call s:ddu_ff_my_settings()
+	function! s:ddu_ff_my_settings() abort
+	  autocmd Syntax <buffer> call s:ddu_ff_my_syntax()
+	endfunction
+	function! s:ddu_ff_my_syntax()
+	  if b:ddu_ui_name ==# 'vim'
+	    runtime! syntax/vim.vim
+	  endif
+	endfunction
+
+Q: I want to custom the statusline.
+
+A: You can disable the original statusline by |ddu-ui-ff-param-statusline|.
+And you can get the status line information by "w:ddu_ui_ff_status" variable.
+
+Q: I want to move to line quickly like denite.nvim's "quick-move" feature.
+
+A: Please use qselect.vim for it.
+https://github.com/Shougo/qselect.vim
+
+Q: Why ddu-ui-ff does not support Vim's popup window feature instead of
+neovim's floating window feature?
+https://github.com/Shougo/ddu-ui-ff/issues/48
+
+A: Because Vim's popup window feature is not focusable.
+ddu-ui-ff implementation depends on the feature.  So the support is not
+acceptable.
+
+Q: |:close| does not move to the ddu-ui-ff window sometimes.
+
+A: Please use |ddu#ui#ff#close()| instead.
+
+
+==============================================================================
+COMPATIBILITY					*ddu-ui-ff-compatibility*
+
+2022.02.07
+* Rename to "ff".
+
+2022.02.01
+* Rename "filterPosition" to "filterFloatingPosition".
+
+2022.01.29
+* Rename ddu#ui#ff#do_map() to ddu#ui#ff#do_action().
+
+==============================================================================
+vim:tw=78:ts=8:ft=help:norl:noet:fen:noet:
