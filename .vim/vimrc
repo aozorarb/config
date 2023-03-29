@@ -8,6 +8,3 @@ execute 'source $HOME/.vim/rc/plugrc'
 set laststatus=2
 set background=dark
 colorscheme iceberg
-
-
-
