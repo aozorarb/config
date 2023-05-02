@@ -11,4 +11,3 @@ call ddc#custom#patch_global('sourceOptions', {
 
 
 call ddc#enable()
-

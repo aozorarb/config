@@ -13,7 +13,6 @@ nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 map M %
-nnoremap / /\v
 
 " "_ is black hole register
 nnoremap x "_x
@@ -36,7 +35,7 @@ nnoremap <silent> <Esc><Esc> :nohlsearch<CR> " Escでhlsearch切り替え
 " 24bitのtrue colorが使えないやつではコメントアウト
 set termguicolors
 if has('persistent_undo') " undoをファイルを閉じても繋がるように
-	set undodir=~/.vim/undo
+	set undodir=/~/.config/vim_undo
 	set undofile
 endif
 
