@@ -1,0 +1,5 @@
+[[plugins]]
+repo = 'scrooloose/syntastic'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'

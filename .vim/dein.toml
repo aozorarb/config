@@ -2,27 +2,6 @@
 repo = 'vim-denops/denops.vim'
 
 [[plugins]]
-repo = 'Shougo/pum.vim'
-
-[[plugins]]
-repo = 'Shougo/ddc.vim'
-
-[[plugins]]
-repo = 'Shougo/ddc-around'
-
-[[plugins]]
-repo = 'Shougo/ddc-matcher_head'
-
-[[plugins]]
-repo = 'Shougo/ddc-sorter_rank'
-
-[[plugins]]
-repo = 'Shougo/ddc-source-nextword'
-
-[[plugins]]
-repo = 'Shougo/ddc-ui-native'
-
-[[plugins]]
 repo = 'Shougo/ddu.vim'
 
 [[plugins]]
@@ -47,16 +26,10 @@ repo = 'itchyny/lightline.vim'
 repo = 'bronson/vim-trailing-whitespace'
 
 [[plugins]]
-repo = 'skanehira/preview-markdown.vim'
-
-[[plugins]]
 repo = 'plasticboy/vim-markdown'
 
 [[plugins]]
 repo = 'kannokanno/previm'
 
 [[plugins]]
-repo = 'tyru/open-browser.vim'
-
-[[plugins]]
-repo = 'scrooloose/syntastic'
+repo = 'tpope/vim-fugitive'
