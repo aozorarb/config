@@ -53,6 +53,8 @@ bindkey '<C-N>' history-beginning-search-forward
 function hist-all { history -E 1 }
 
 # useful setting
+set -o vi
+alias vi='vim --clean'
 bindkey -e
 setopt auto_cd
 alias ...='cd ../..'
@@ -62,12 +64,22 @@ setopt pushd_ignore_dups
 setopt extended_glob
 
 # opam setting
-eval `opam env`
+# eval `opam env`
 # user custom alias
 alias n3="nnn -de"
 alias acf="at_coder_friends"
 alias acft="at_coder_friends test-all"
 alias acfs="at_coder_friends submit"
+alias acfe="at_coder_friends setup"
 alias lld="otool -L"
 alias ls="/bin/ls -G"
 alias ocaml="rlwrap ocaml"
+alias clg="clang"
+alias clg++"clang++"
+# TeX Live
+PATH=/usr/local/texlive/2023/bin/universal-darwin:$PATH
+MANPATH=/usr/local/texlive/2023/texmf-dist/doc/man:$MANPATH
+INFOPATH=/usr/local/texlive/2023/texmf-dist/doc/info:$INFOPATH
+
+# Iterm2
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
