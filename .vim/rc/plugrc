@@ -1,3 +1,5 @@
 let g:memolist_path = "$HOME/diary/memo"
 
-
+" at_coder_friends
+nnoremap <Space>acft :! at_coder_friends test-all % <CR>
+nnoremap <Space>acfs :! at_coder_friends submit % <CR>

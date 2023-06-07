@@ -33,3 +33,9 @@ repo = 'kannokanno/previm'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+
+[[plugins]]
+repo = 'dhruvasagar/vim-table-mode'
