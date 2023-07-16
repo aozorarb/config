@@ -9,15 +9,3 @@ call ddc#custom#patch_global('sourceOptions', {
 \       }
 \   })
 
-call ddc#custom#patch_filetype(['c', 'cpp'], 'sources',
-\    ['around', 'clangd'])
-
-call ddc#custom#patch_filetype(['c', 'cpp'], 'sourceOptions', #{
-      \   clangd: #{ mark: 'C' },
-      \ })
-call ddc#custom#patch_filetype('markdown', 'sourceParams', #{
-      \   around: #{ maxSize: 100 },
-      \ })
-
-
-call ddc#enable()

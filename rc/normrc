@@ -6,26 +6,6 @@ set cursorline
 set hidden
 set expandtab
 set virtualedit+=block
-" map
-nnoremap <silent> [b :bprev<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap j gj
-nnoremap k gk
-nnoremap gj j
-nnoremap gk k
-map M %
-
-" "_ is black hole register
-nnoremap x "_x
-nnoremap X "_D
-" space map
-nnoremap <silent><Space>o   :<C-u>put =repeat(nr2char(10), v:count1)<CR>
-nnoremap <silent><Space>O   :<C-u>put! =repeat(nr2char(10), v:count1)<CR>'[
-nnoremap <silent><Space>q   :<C-u>exit<CR>
-nnoremap <silent><Space>w   :<C-u>write<CR>
-" only macOS
-nnoremap <Space>p+  :<C-u>write !pbcopy<CR>
-
 set smartindent
 set is
 set wildmenu
@@ -33,7 +13,6 @@ set backspace=indent,eol,start
 set showmatch
 source $VIMRUNTIME/macros/matchit.vim " [%]を拡張
 
-nnoremap <silent> <Esc><Esc> :nohlsearch<CR> " Escでhlsearch切り替え
 " 24bitのtrue colorが使えないやつではコメントアウト
 set termguicolors
 if has('persistent_undo') " undoをファイルを閉じても繋がるように
@@ -43,4 +22,3 @@ endif
 
 au BufRead,BufNewFile *.md set filetype=markdown
 let g:previm_open_cmd = 'open -a Firefox'
-

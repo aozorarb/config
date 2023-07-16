@@ -9,19 +9,25 @@ path=(
     /usr/local/opt/gnu-sed/libexec/gnubin(N-/) # sed
     /usr/local/opt/gnu-tar/libexec/gnubin(N-/) # tar
     /usr/local/opt/grep/libexec/gnubin(N-/) # grep
+    /usr/local/texlive/2023/bin/universal-darwin(N-/) # LaTeX
     ${path}
 )
 manpath=(
     /usr/local
-    opt/coreutils/libexec/gnuman(N-/) # coreutils
+    /opt/coreutils/libexec/gnuman(N-/) # coreutils
     /usr/local/opt/ed/libexec/gnuman(N-/) # ed
     /usr/local/opt/findutils/libexec/gnuman(N-/) # findutils
     /usr/local/opt/gnu-sed/libexec/gnuman(N-/) # sed
     /usr/local/opt/gnu-tar/libexec/gnuman(N-/) # tar
     /usr/local/opt/grep/libexec/gnuman(N-/) # grep
+    /usr/local/texlive/2023/texmf-dist/doc/man(N-/) # LaTeX
     ${manpath}
 )
 
+infopath=(
+    /usr/local/texlive/2023/texmf-dist/doc/info(N-/)
+    ${infopath}
+)
 eval "$(rbenv init -)"
 
 # >>> conda initialize >>>
@@ -60,22 +66,16 @@ setopt extended_glob
 
 # user custom alias
 alias vi='vim --clean'
+alias info='info --vi-keys'
 alias n3="nnn -de"
 alias acf="at_coder_friends"
 alias acft="at_coder_friends test-all"
-alias acfs="at_coder_friends submit"
-alias acfe="at_coder_friends setup"
+alias acfg="at_coder_friends check-and-go"
+alias acfs="at_coder_friends setup"
 alias lld="otool -L"
 alias ls="/bin/ls -G"
 alias ocaml="rlwrap ocaml"
 alias clg="clang"
 alias clgpp="clang++"
-# TeX Live
-
 # Iterm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-# zsh_complettions
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-  autoload -Uz compinit && compinit
-fi
