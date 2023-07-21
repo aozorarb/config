@@ -50,3 +50,11 @@ nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
 
 " only macOS, clipboard copy
 nnoremap <Space>p+  :<C-u>write !pbcopy<CR>
+
+" mark from https://saihoooooooo.hatenablog.com/entry/2013/04/30/001908
+nnoremap [Mark] <Nop>
+nmap m [Mark]
+nnoremap [Mark]n ]`
+nnoremap [Mark]p ]`
+nnoremap [Mark]l :<C-u>marks<CR>
+

@@ -76,6 +76,6 @@ alias lld="otool -L"
 alias ls="/bin/ls -G"
 alias ocaml="rlwrap ocaml"
 alias clg="clang"
-alias clgpp="clang++"
+alias cpp="clang++"
 # Iterm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
