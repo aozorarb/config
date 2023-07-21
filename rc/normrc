@@ -27,7 +27,7 @@ if !exists('g:markrement_char')
     \     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
     \ ]
 endif
-nnoremap <silent>m :<C-u>call <SID>AutoMarkrement()<CR>
+nnoremap <silent>[Mark]m :<C-u>call <SID>AutoMarkrement()<CR>
 function! s:AutoMarkrement()
     if !exists('b:markrement_pos')
         let b:markrement_pos = 0
