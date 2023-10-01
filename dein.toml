@@ -44,8 +44,16 @@ repo = 'Shougo/ddc-matcher_head'
 repo = 'Shougo/ddc-sorter_rank'
 
 [[plugins]]
+repo = 'Shougo/ddc-nextword'
+
+[[plugins]]
+repo = 'Shougo/pum.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-source-mocword'
+
+[[plugins]]
 repo = 'rking/ag.vim'
 
 [[plugins]]
 repo = 'jacquesbh/vim-showmarks'
-

@@ -36,6 +36,7 @@ nnoremap <silent> [TABCMD]s :<c-u>tabs<CR>
 
 " at_coder_friends
 " setting solvable level for shugyo
+
 let atCoder_solvable = ['A', 'B', 'C']
 let atCoder_extension = 'rb'
 nnoremap [ACFCMD] <nop>
@@ -53,8 +54,8 @@ nnoremap <Space>p+  :<C-u>write !pbcopy<CR>
 
 " mark from https://saihoooooooo.hatenablog.com/entry/2013/04/30/001908
 nnoremap [Mark] <Nop>
-nmap m [Mark]
-nnoremap [Mark]] `]
-nnoremap [Mark][ `[
+nmap <leader>m [Mark]
+nnoremap ]m ]`
+nnoremap [m [`
 nnoremap [Mark]l :<C-u>marks<CR>
 
