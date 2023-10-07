@@ -47,10 +47,10 @@ repo = 'Shougo/ddc-sorter_rank'
 repo = 'Shougo/ddc-nextword'
 
 [[plugins]]
-repo = 'Shougo/pum.vim'
+repo = 'Shougo/ddc-source-mocword'
 
 [[plugins]]
-repo = 'Shougo/ddc-source-mocword'
+repo = 'Shougo/pum.vim'
 
 [[plugins]]
 repo = 'rking/ag.vim'

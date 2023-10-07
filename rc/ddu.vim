@@ -3,7 +3,7 @@ call ddu#custom#patch_global({
 \   'sources': [{'name': 'file', 'params': {}}],
 \   'sourceOptions': {
 \       '_': {
-\           'coloumns': ['filename'],
+\           'matchers': ['
 \       },
 \   },
 \   'kindOptions': {
