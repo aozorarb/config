@@ -1,22 +1,7 @@
 [[plugins]]
 repo = 'vim-denops/denops.vim'
 
-[[plugins]]
-repo = 'Shougo/ddu.vim'
-
-[[plugins]]
-repo = 'Shougo/ddu-ui-filer'
-
-[[plugins]]
-repo = 'Shougo/ddu-kind-file'
-
-[[plugins]]
-repo = 'Shougo/ddu-source-file'
-
-[[plugins]]
-repo = 'Shougo/ddu-column-filename'
-
-[[plugins]]
+[plugins]]
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
@@ -50,10 +35,7 @@ repo = 'Shougo/ddc-nextword'
 repo = 'Shougo/ddc-source-mocword'
 
 [[plugins]]
+repo = 'tani/ddc-fuzzy'
+
+[[plugins]]
 repo = 'Shougo/pum.vim'
-
-[[plugins]]
-repo = 'rking/ag.vim'
-
-[[plugins]]
-repo = 'jacquesbh/vim-showmarks'
