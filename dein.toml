@@ -42,3 +42,4 @@ repo = 'Shougo/pum.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-ui-pum'
+
