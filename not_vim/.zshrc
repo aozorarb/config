@@ -67,23 +67,19 @@ setopt extended_glob
 # user custom alias
 alias vi='vim --clean'
 alias info='info --vi-keys'
-alias n3="nnn -de"
 alias acf="at_coder_friends"
 alias acft="at_coder_friends test-all"
 alias acfg="at_coder_friends check-and-go"
 alias acfs="at_coder_friends setup"
 alias lld="otool -L"
-alias ls="/bin/ls -G"
+alias ls="ls -G"
+alias ll="ls -G -l"
+alias la="ls -G -la"
 alias ocaml="rlwrap ocaml"
 alias clg="clang"
 alias cpp="clang++"
-
-alias gits="git switch"
-alias gitb="git branch"
-alias gita="git add"
-alias gita.="git add ."
-alias gitc="git commit"
-alias gitcm="git commit -m"
+alias ss="source ~/.zshrc"
+alias g="git"
 
 # Iterm2
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

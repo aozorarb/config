@@ -13,5 +13,3 @@ function! AtCoder_open_contests(contests, ext) abort
   endfor
 endfunction
 
-" ag.vim
-nmap <leader>; :Ag <C-r>=expand("<CWORD>")<CR><CR>

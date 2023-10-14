@@ -2,9 +2,8 @@ execute 'source $HOME/.vim/rc/map.vim'
 execute 'source $HOME/.vim/rc/norm.vim'
 execute 'source $HOME/.vim/rc/plug.vim'
 execute 'source $HOME/.vim/rc/dein.vim'
-execute 'source $HOME/.vim/rc/ddc.vim'
 execute 'source $HOME/.vim/rc/auto.vim'
-execute 'source $HOME/.vim/rc/ddu.vim'
+execute 'source $HOME/.vim/rc/ddc.vim'
 " lightline.vim
 set laststatus=2
 set background=dark

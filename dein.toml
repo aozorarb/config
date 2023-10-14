@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'vim-denops/denops.vim'
 
-[plugins]]
+[[plugins]]
 repo = 'cocopon/iceberg.vim'
 
 [[plugins]]
@@ -39,3 +39,6 @@ repo = 'tani/ddc-fuzzy'
 
 [[plugins]]
 repo = 'Shougo/pum.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc-ui-pum'
