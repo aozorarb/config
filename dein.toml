@@ -38,8 +38,15 @@ repo = 'Shougo/ddc-source-mocword'
 repo = 'tani/ddc-fuzzy'
 
 [[plugins]]
-repo = 'Shougo/pum.vim'
+repo = 'mattn/vim-lsp-settings'
 
 [[plugins]]
-repo = 'Shougo/ddc-ui-pum'
+repo = 'prabirshrestha/vim-lsp'
 
+[[plugins]]
+repo = 'shun/ddc-source-vim-lsp'
+
+[[plugins]]
+repo = 'matsui54/ddc-buffer'
+
+[[plugins]]

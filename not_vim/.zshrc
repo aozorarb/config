@@ -9,7 +9,6 @@ path=(
     /usr/local/opt/gnu-sed/libexec/gnubin(N-/) # sed
     /usr/local/opt/gnu-tar/libexec/gnubin(N-/) # tar
     /usr/local/opt/grep/libexec/gnubin(N-/) # grep
-    /usr/local/texlive/2023/bin/universal-darwin(N-/) # LaTeX
     ${path}
 )
 manpath=(
@@ -20,14 +19,9 @@ manpath=(
     /usr/local/opt/gnu-sed/libexec/gnuman(N-/) # sed
     /usr/local/opt/gnu-tar/libexec/gnuman(N-/) # tar
     /usr/local/opt/grep/libexec/gnuman(N-/) # grep
-    /usr/local/texlive/2023/texmf-dist/doc/man(N-/) # LaTeX
     ${manpath}
 )
 
-infopath=(
-    /usr/local/texlive/2023/texmf-dist/doc/info(N-/)
-    ${infopath}
-)
 eval "$(rbenv init -)"
 
 # >>> conda initialize >>>
@@ -81,5 +75,3 @@ alias cpp="clang++"
 alias ss="source ~/.zshrc"
 alias g="git"
 
-# Iterm2
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
