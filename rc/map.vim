@@ -47,7 +47,9 @@ nnoremap [ACFCMD]s :! at_coder_friends submit % <CR>
 nnoremap [ACFCMD]o :call AtCoder_open_contests(atCoder_solvable, atCoder_extension)<CR>
 
 " Escでhlsearch切り替え
-nnoremap <silent> <Esc><Esc> :nohlsearch<CR>
+nnoremap <leader>h :nohl<CR>
+nnoremap <leader>l :LspStopServer<CR>
+
 
 " only macOS, clipboard copy
 nnoremap <Space>p+  :<C-u>write !pbcopy<CR>
