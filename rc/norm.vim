@@ -19,7 +19,6 @@ if has('persistent_undo') " undoをファイルを閉じても繋がるように
 	set undodir=/~/.config/vim_undo
 	set undofile
 endif
-
 " auto supply marks from: https://saihoooooooo.hatenablog.com/entry/2013/04/30/001908
 if !exists('g:markrement_char')
     let g:markrement_char = [

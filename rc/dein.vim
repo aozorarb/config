@@ -1,5 +1,3 @@
-"--ここからdein.vim installation --
-
 let $CACHE = expand('~/.chache')
 if !isdirectory($CACHE)
   call mkdir($CACHE, 'p')

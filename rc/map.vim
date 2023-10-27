@@ -22,18 +22,18 @@ nnoremap <silent><Leader>q   :<C-u>exit<CR>
 nnoremap <silent><Leader>w   :<C-u>write<CR>
 
 " tab
+" tab move can gt, gT
 nnoremap [TABCMD] <nop>
 nmap     <leader>t [TABCMD]
-nnoremap <silent> [t        :<C-u>tabnext<CR>
-nnoremap <silent> ]t        :<C-u>tabprevious<CR>
 nnoremap <silent> [TABCMD]f :<c-u>tabfirst<CR>
 nnoremap <silent> [TABCMD]l :<c-u>tablast<CR>
-nnoremap <silent> [TABCMD]N :<c-u>tabNext<CR>
 nnoremap <silent> [TABCMD]e :<c-u>tabedit<CR>
 nnoremap <silent> [TABCMD]c :<c-u>tabclose<CR>
 nnoremap <silent> [TABCMD]o :<c-u>tabonly<CR>
 nnoremap <silent> [TABCMD]s :<c-u>tabs<CR>
 
+" source .vimrc
+nnoremap <leader>ss :<c-u>source $HOME/.vim/vimrc<CR>
 " at_coder_friends
 " setting solvable level for shugyo
 
@@ -46,7 +46,6 @@ nnoremap [ACFCMD]g :! at_coder_friends check-and-go % <CR>
 nnoremap [ACFCMD]s :! at_coder_friends submit % <CR>
 nnoremap [ACFCMD]o :call AtCoder_open_contests(atCoder_solvable, atCoder_extension)<CR>
 
-" Escでhlsearch切り替え
 nnoremap <leader>h :nohl<CR>
 nnoremap <leader>l :LspStopServer<CR>
 
