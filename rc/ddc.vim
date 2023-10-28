@@ -10,8 +10,8 @@ call ddc#custom#patch_global('ui', 'native')
 
 " sources
 call ddc#custom#patch_global('sources', [
-      \ 'around', 'vim-lsp',
-      \  'line', 'buffer', 'ctags'])
+      \ 'around', 'line', 'buffer', 'ctags'
+      \ ])
 
 " source_options
 call ddc#custom#patch_global('sourceOptions', #{
@@ -23,7 +23,6 @@ call ddc#custom#patch_global('sourceOptions', #{
       \ },
       \ around: #{ mark: 'A' },
       \ buffer: #{ mark: 'B' },
-      \ vim-lsp: #{ mark: 'lsp' },
       \ line: #{ mark: 'line' },
       \ })
 " source_params
