@@ -18,7 +18,10 @@ call ddc#custom#patch_global('sourceOptions', #{
       \ _: #{
       \   matchers: ['matcher_fuzzy'],
       \   sorters: ['sorter_fuzzy'],
-      \   converters: ['converter_fuzzy'],
+      \   converters: [
+      \     'converter_fuzzy',
+      \     'converter_remove_overlap'
+      \   ],
       \   minAutoCompleteLength: 3,
       \ },
       \ around: #{ mark: 'A' },
@@ -38,7 +41,7 @@ call ddc#custom#patch_global('sourceParams', #{
 
 " filter_params
 call ddc#custom#patch_global('filterParams', #{
-      \ matcher_fuzzy: #{ splitMode: 'character' }
+      \ matcher_fuzzy: #{ splitMode: 'word' }
       \ })
 
 call ddc#enable()
