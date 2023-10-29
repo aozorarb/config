@@ -1,8 +1,10 @@
 [[plugins]]
 repo = 'vim-denops/denops.vim'
+# import
 
 [[plugins]]
 repo = 'cocopon/iceberg.vim'
+#color sheme
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -14,13 +16,20 @@ repo = 'bronson/vim-trailing-whitespace'
 repo = 'dhruvasagar/vim-table-mode'
 
 [[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+# ddc
+[[plugins]]
 repo = 'Shougo/ddc.vim'
 
+# ddc ui
 [[plugins]]
 repo = 'Shougo/ddc-ui-native'
 
-[[plugins]]
-repo = 'Shougo/ddc-source-around'
+# ddc filter
 
 [[plugins]]
 repo = 'Shougo/ddc-matcher_head'
@@ -29,24 +38,21 @@ repo = 'Shougo/ddc-matcher_head'
 repo = 'Shougo/ddc-sorter_rank'
 
 [[plugins]]
-repo = 'Shougo/ddc-nextword'
-
-[[plugins]]
-repo = 'Shougo/ddc-source-mocword'
-
-[[plugins]]
 repo = 'tani/ddc-fuzzy'
 
 [[plugins]]
-repo = 'mattn/vim-lsp-settings'
+repo = 'Shougo/ddc-filter-converter_remove_overlap'
 
+# ddc source
 [[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-
-[[plugins]]
-repo = 'shun/ddc-source-vim-lsp'
+repo = 'Shougo/ddc-source-around'
 
 [[plugins]]
 repo = 'matsui54/ddc-buffer'
 
 [[plugins]]
+repo = 'Shougo/ddc-source-line'
+
+[[plugins]]
+repo = 'delphinus/ddc-ctags'
+
