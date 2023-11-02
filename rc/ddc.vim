@@ -10,9 +10,8 @@ call ddc#custom#patch_global('ui', 'native')
 
 " sources
 call ddc#custom#patch_global('sources', [
-      \ 'around', 'line', 'buffer', 'ctags'
+      \ 'around', 'line', 'buffer'
       \ ])
-
 " source_options
 call ddc#custom#patch_global('sourceOptions', #{
       \ _: #{
