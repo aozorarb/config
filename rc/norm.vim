@@ -4,7 +4,6 @@ set history=200
 set tabstop=2
 set shiftwidth=2
 set ruler
-set display=trancate
 set scrolloff=3
 set cursorline
 set hidden
