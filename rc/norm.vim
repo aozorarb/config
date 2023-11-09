@@ -5,6 +5,7 @@ set tabstop=2
 set shiftwidth=2
 set ruler
 set scrolloff=3
+set nrformats-=ocatal
 set cursorline
 set hidden
 set expandtab
