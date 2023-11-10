@@ -1,4 +1,3 @@
-"vim:filetype=vim
 let g:memolist_path = "$HOME/diary/memo"
 
 " at_coder_friends

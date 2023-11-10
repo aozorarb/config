@@ -1,5 +1,4 @@
-set fileencodings=utf-8,cp932
-set number
+set fileencodings=utf-8
 set history=200
 set tabstop=2
 set shiftwidth=2
@@ -9,16 +8,24 @@ set nrformats-=ocatal
 set cursorline
 set hidden
 set expandtab
-set virtualedit+=block
 set smartindent
-set is
+set incsearch
 set wildmenu
 set backspace=indent,eol,start
 set showmatch
 packadd! matchit
-" 24bitのtrue colorが使えないやつではコメントアウト
-set termguicolors
+
+if has('termguicolors')
+  set termguicolors
+endif
+
+if has('syntax')
+  filetype plugin indent on
+  syntax enable
+endif
+set number
+
 if has('persistent_undo') " undoをファイルを閉じても繋がるように
-	set undodir=/~/.config/vim_undo
-	set undofile
+	set undodir=~/.config/vim_undo
+ set undofile
 endif

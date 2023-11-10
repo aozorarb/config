@@ -4,7 +4,6 @@
 " *source_params*
 " *filter_params*
 
-" let g:copilog_no_maps = v:true
 " ui
 call ddc#custom#patch_global('ui', 'native')
 

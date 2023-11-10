@@ -2,24 +2,37 @@
 nnoremap <silent> [b :bprev<CR>
 nnoremap <silent> ]b :bnext<CR>
 
+" corection inconsistency
+nnoremap Y y$
+
 " swap
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
-" command
-xnoremap <C-a> <Home>
+" change almost do not use key
+nnoremap s $
+nnoremap S ^
+" open file
+nnoremap _ :e 
+nnoremap , "
+" move parenthesis
+nnoremap mp %
+
+" command move
+" C-h: <BS>, C-j: <CR>
+cnoremap <C-k> <left>
+cnoremap <C-l> <right>
+
 " "_ is black hole register
 nnoremap x "_x
-nnoremap X "_D
+vnoremap x "_x
+nnoremap X "_X
+vnoremap X "_X
 
 " leader = space
 let mapleader = "\<Space>"
-nnoremap <silent><Leader>o   :<C-u>put =repeat(nr2char(10), v:count1)<CR>
-nnoremap <silent><Leader>O   :<C-u>put! =repeat(nr2char(10), v:count1)<CR>
-nnoremap <silent><Leader>q   :<C-u>exit<CR>
-nnoremap <silent><Leader>w   :<C-u>write<CR>
 
 " tab
 " tab move can gt, gT
@@ -47,16 +60,14 @@ nnoremap [ACFCMD]s :! at_coder_friends submit % <CR>
 nnoremap [ACFCMD]o :call AtCoder_open_contests(atCoder_solvable, atCoder_extension)<CR>
 
 nnoremap <leader>h :nohl<CR>
-nnoremap <leader>l :LspStopServer<CR>
 
 
 " only macOS, clipboard copy
-nnoremap <Space>p+  :<C-u>write !pbcopy<CR>
+if has('mac')
+  nnoremap <Space>p+  :<C-u>write !pbcopy<CR>
+endif
 
-" mark from https://saihoooooooo.hatenablog.com/entry/2013/04/30/001908
 nnoremap [Mark] <Nop>
 nmap <leader>m [Mark]
-nnoremap ]m ]`
-nnoremap [m [`
 nnoremap [Mark]l :<C-u>marks<CR>
 

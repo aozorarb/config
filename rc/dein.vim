@@ -13,7 +13,6 @@ execute 'set runtimepath^=' . substitute(
 endif
 
 "-- dein.vim config --
-set nocompatible
 let s:dein_base = '~/.cache/dein/'
 execute 'set runtimepath+=' . s:dein_dir
 
@@ -24,11 +23,6 @@ call dein#load_toml('~/.vim/dein.toml', {'lazy': 0})
 call dein#load_toml('~/.vim/dein_lazy.toml', {'lazy': 1})
 
 call dein#end()
-
-filetype indent plugin on
-if has('syntax')
-  syntax on
-endif
 
 " plugin remove check
 if len(dein#check_clean()) > 0
