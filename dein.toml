@@ -10,12 +10,6 @@ repo = 'cocopon/iceberg.vim'
 repo = 'itchyny/lightline.vim'
 
 [[plugins]]
-repo = 'bronson/vim-trailing-whitespace'
-
-[[plugins]]
-repo = 'dhruvasagar/vim-table-mode'
-
-[[plugins]]
 repo = 'tpope/vim-surround'
 
 [[plugins]]
@@ -55,4 +49,3 @@ repo = 'Shougo/ddc-source-line'
 
 [[plugins]]
 repo = 'delphinus/ddc-ctags'
-

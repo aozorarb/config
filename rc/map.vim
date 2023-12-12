@@ -1,21 +1,16 @@
-" buffer
-nnoremap <silent> [b :bprev<CR>
-nnoremap <silent> ]b :bnext<CR>
-
 " corection inconsistency
 nnoremap Y y$
 
-" swap
+" swap: j - gj, k - gk
 nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
 
 " change almost do not use key
-nnoremap s $
-nnoremap S ^
-" open file
-nnoremap _ :e 
+noremap S $
+" open filechange file
+nnoremap _ :ter<CR> 
 nnoremap , "
 " move parenthesis
 nnoremap mp %
@@ -67,7 +62,6 @@ if has('mac')
   nnoremap <Space>p+  :<C-u>write !pbcopy<CR>
 endif
 
-nnoremap [Mark] <Nop>
-nmap <leader>m [Mark]
-nnoremap [Mark]l :<C-u>marks<CR>
+" bye l mark
+nnoremap ml :<C-u>marks<CR>
 
