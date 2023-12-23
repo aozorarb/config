@@ -15,4 +15,3 @@ set background=dark
 colorscheme iceberg
 syntax enable
 set number
-set relativenumber
