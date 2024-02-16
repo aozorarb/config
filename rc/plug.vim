@@ -12,3 +12,17 @@ function! AtCoder_open_contests(contests, ext) abort
   endfor
 endfunction
 
+
+" clear all buffer
+function! Clear_buffer() abort
+  if &modifiable
+    %d
+  endif
+endfunction
+
+
+" clear all buffer and puts "*
+function! Clear_buffer_and_puts_clipboard() abort
+  call Clear_buffer_all()
+  norm "*p
+endfunction

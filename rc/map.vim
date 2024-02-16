@@ -59,9 +59,16 @@ nnoremap <leader>h :nohl<CR>
 
 " only macOS, clipboard copy
 if has('mac')
-  nnoremap <Space>p+  :<C-u>write !pbcopy<CR>
+  nnoremap <leader>p+  :<C-u>write !pbcopy<CR>
 endif
 
 " bye l mark
 nnoremap ml :<C-u>marks<CR>
 
+" insert blank line up
+nnoremap <leader>O O<Esc>j
+nnoremap <leader>o o<Esc>k
+
+" commands
+nnoremap <leader>cb  :call Clear_buffer()<CR>
+nnoremap <leader>cbp :call Clear_buffer_and_puts_clipboard()<CR>

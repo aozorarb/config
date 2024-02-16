@@ -7,10 +7,13 @@
 " ui
 call ddc#custom#patch_global('ui', 'native')
 
+
 " sources
 call ddc#custom#patch_global('sources', [
       \ 'around', 'line', 'buffer'
       \ ])
+
+
 " source_options
 call ddc#custom#patch_global('sourceOptions', #{
       \ _: #{
@@ -26,8 +29,9 @@ call ddc#custom#patch_global('sourceOptions', #{
       \ buffer: #{ mark: 'B' },
       \ line: #{ mark: 'line' },
       \ })
-" source_params
 
+
+" source_params
 call ddc#custom#patch_global('sourceParams', #{
       \ _: #{ maxSize: 50 },
       \ buffer: #{
@@ -36,6 +40,7 @@ call ddc#custom#patch_global('sourceParams', #{
       \   forceCollect: v:true
       \ },
       \ })
+
 
 " filter_params
 call ddc#custom#patch_global('filterParams', #{
