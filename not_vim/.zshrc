@@ -1,4 +1,3 @@
-export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init -)"
 export PATH=/usr/local/user_command:$PATH
@@ -38,6 +37,8 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+#
+#
 # history setting
 setopt hist_ignore_all_dups
 setopt hist_ignore_space
@@ -50,6 +51,7 @@ bindkey '<C-N>' history-beginning-search-forward
 function hist-all { history -E 1 }
 
 # useful setting
+# I think that line editing is best emacs
 bindkey -e
 setopt auto_cd
 alias ...='cd ../..'
@@ -69,9 +71,7 @@ alias lld="otool -L"
 alias ls="ls -G"
 alias ll="ls -G -l"
 alias la="ls -G -la"
-alias ocaml="rlwrap ocaml"
 alias clg="clang"
 alias cpp="clang++"
 alias ss="source ~/.zshrc"
 alias g="git"
-

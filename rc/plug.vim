@@ -23,6 +23,8 @@ endfunction
 
 " clear all buffer and puts "*
 function! Clear_buffer_and_puts_clipboard() abort
-  call Clear_buffer_all()
-  norm "*p
+  if &modifiable
+    call Clear_buffer()
+    norm "*p
+  endif
 endfunction

@@ -14,15 +14,3 @@ set wildmenu
 set backspace=indent,eol,start
 set showmatch
 set number
-packadd! matchit
-
-if has('termguicolors')
-  set termguicolors
-endif
-
-filetype plugin indent on
-
-if has('persistent_undo') " undoをファイルを閉じても繋がるように
-	set undodir=~/.config/vim_undo
- set undofile
-endif
