@@ -14,8 +14,12 @@ execute 'source $HOME/.vim/rc/ddc.vim'
 set laststatus=2
 set background=dark
 
-" if iceberg is disable, use builtin clorscheme 'slate'
-colorscheme iceberg
+" if iceberg is disable, use builtin 'slate'
+try
+  colorscheme iceberg
+catch 
+  colorscheme slate
+endtry
 
 syntax enable
 set number
