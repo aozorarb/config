@@ -13,4 +13,6 @@ set incsearch
 set wildmenu
 set backspace=indent,eol,start
 set showmatch
-set number
+set tags+=./tags;
+
+

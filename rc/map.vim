@@ -80,3 +80,6 @@ nnoremap <leader>o o<Esc>k
 " commands
 nnoremap <leader>cb  :call Clear_buffer()<CR>
 nnoremap <leader>cbp :call Clear_buffer_and_puts_clipboard()<CR>
+
+" make ctags
+nnoremap <leader>ct  :!ctags -R .<CR>
