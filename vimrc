@@ -19,6 +19,7 @@ try
   colorscheme iceberg
 catch 
   colorscheme slate
+  echo 'Iceberg cannot be used'
 endtry
 
 syntax enable
