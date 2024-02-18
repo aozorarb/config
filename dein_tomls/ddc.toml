@@ -1,0 +1,32 @@
+[[plugins]]
+repo = 'Shougo/ddc.vim'
+
+# ddc ui
+[[plugins]]
+repo = 'Shougo/ddc-ui-native'
+
+# ddc filter
+[[plugins]]
+repo = 'Shougo/ddc-matcher_head'
+
+[[plugins]]
+repo = 'Shougo/ddc-sorter_rank'
+
+[[plugins]]
+repo = 'tani/ddc-fuzzy'
+
+[[plugins]]
+repo = 'Shougo/ddc-filter-converter_remove_overlap'
+
+# ddc source
+[[plugins]]
+repo = 'Shougo/ddc-source-around'
+
+[[plugins]]
+repo = 'matsui54/ddc-buffer'
+
+[[plugins]]
+repo = 'Shougo/ddc-source-line'
+
+[[plugins]]
+repo = 'delphinus/ddc-ctags'

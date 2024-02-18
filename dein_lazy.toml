@@ -3,3 +3,4 @@ repo = 'tyru/open-browser.vim'
 
 [[plugins]]
 repo = 'dhruvasagar/vim-table-mode'
+

@@ -2,6 +2,7 @@ let $CACHE = expand('~/.chache')
 if !isdirectory($CACHE)
   call mkdir($CACHE, 'p')
 endif
+
 let s:dein_dir = $CACHE . '/dein/repos/github.com/Shougo/dein.vim'
 if &runtimepath !~# '/dein.vim'
   " let s:dein_dir = fnamemodify('dein.vim', ':p')
@@ -12,6 +13,7 @@ execute 'set runtimepath^=' . substitute(
     \ fnamemodify(s:dein_dir, ':p') , '[/\\]$', '', '')
 endif
 
+
 "-- dein.vim config --
 let s:dein_base = '~/.cache/dein/'
 execute 'set runtimepath+=' . s:dein_dir
@@ -19,9 +21,14 @@ execute 'set runtimepath+=' . s:dein_dir
 call dein#begin(s:dein_base)
 
 call dein#add(s:dein_dir)
-call dein#load_toml('~/.vim/dein.toml', {'lazy': 0})
-call dein#load_toml('~/.vim/dein_lazy.toml', {'lazy': 1})
 
+" dein#load_toml for each ~/.vim/dein_tomls/*
+ruby << RUBY
+  toml_files = Dir.glob(File.expand_path('~/.vim/dein_tomls/*'))
+  toml_files.each do |file|
+    Vim.command("call dein#load_toml('#{file}')")
+  end
+RUBY
 call dein#end()
 
 " plugin remove check

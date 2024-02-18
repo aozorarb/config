@@ -1,0 +1,10 @@
+[[plugins]]
+# important
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+#color scheme
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'

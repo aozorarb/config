@@ -13,6 +13,9 @@ execute 'source $HOME/.vim/rc/ddc.vim'
 " lightline.vim
 set laststatus=2
 set background=dark
+
+" if iceberg is disable, use builtin clorscheme 'slate'
 colorscheme iceberg
+
 syntax enable
 set number
