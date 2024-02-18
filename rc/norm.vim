@@ -16,3 +16,15 @@ set showmatch
 set tags+=./tags;
 
 
+packadd! matchit
+
+if has('termguicolors')
+  set termguicolors
+endif
+
+filetype plugin indent on
+
+if has('persistent_undo') " undoがファイルを閉じても繋がるように
+	set undodir=~/.config/vim_undo
+ set undofile
+endif
