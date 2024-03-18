@@ -15,7 +15,6 @@ set backspace=indent,eol,start
 set showmatch
 set tags+=./tags;
 
-
 packadd! matchit
 
 if has('termguicolors')

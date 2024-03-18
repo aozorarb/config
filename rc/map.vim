@@ -1,4 +1,4 @@
-" corection inconsistency
+" correct inconsistency
 nnoremap Y y$
 
 " swap: j - gj, k - gk
@@ -9,9 +9,6 @@ nnoremap gk k
 
 " change almost do not use key
 noremap S $
-
-" open filechange file
-
 nnoremap _ :ter<CR> 
 
 " Command mode move
@@ -20,10 +17,10 @@ cnoremap <C-k> <left>
 cnoremap <C-l> <right>
 
 " "_ is black hole register
-" nnoremap x "_x
-" vnoremap x "_x
-" nnoremap X "_X
-" vnoremap X "_X
+nnoremap x "_x
+vnoremap x "_x
+nnoremap X "_X
+vnoremap X "_X
 
 " leader = space
 let mapleader = "\<Space>"
