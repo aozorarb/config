@@ -81,6 +81,3 @@ nnoremap <leader>cbp :call Clear_buffer_and_puts_clipboard()<CR>
 " make ctags
 nnoremap <leader>ct  :!ctags -R .<CR>
 
-" dvorak mode
-nnoremap <leader>kq  :source $HOME/.vim/rc/keyboard/qwerty.vim<CR>
-nnoremap <leader>kda :source $HOME/.vim/rc/keyboard/dvorak-mac-jis.vim<CR>
