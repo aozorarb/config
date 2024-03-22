@@ -81,3 +81,6 @@ nnoremap <leader>cbp :call Clear_buffer_and_puts_clipboard()<CR>
 " make ctags
 nnoremap <leader>ct  :!ctags -R .<CR>
 
+" enter method for mac jis keyboard to ansi
+inoremap <C-x>' `
+inoremap <C-x>- ~
