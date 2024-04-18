@@ -16,12 +16,17 @@ set showmatch
 set tags+=./tags;
 
 " for Dvorak
-set keymap=dvorak
+set keymap=dvorak-reverse-digits
+
 packadd! matchit
 
 if has('termguicolors')
   set termguicolors
 endif
+
+" for ruby-mini-test
+set completefunc=syntaxcomplete#Complete
+
 
 filetype plugin indent on
 

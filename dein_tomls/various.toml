@@ -3,3 +3,4 @@ repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'vim-skk/skkeleton'
+
