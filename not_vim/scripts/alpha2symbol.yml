@@ -35,6 +35,6 @@ swap_keys:
   b: S-4
   n: S-2
   m: S-semicolon
-  period: grave_accent_and_tilde
-  slash: S-slash
+  comma: grave_accent_and_tilde
+  period: S-slash
   

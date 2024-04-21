@@ -1,5 +1,5 @@
 {
-  "description": "Symbol key(US)",
+  "description": "Symbol key(US dvorak)",
   "manipulators": [
     {
       "type": "basic",
@@ -73,7 +73,7 @@
       },
       "to": [
         {
-          "key_code": "open_bracket"
+          "key_code": "hyphen"
         }
       ]
     },
@@ -88,6 +88,29 @@
       ],
       "from": {
         "key_code": "e",
+        "modifiers": {
+          "mandatory": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "equal_sign"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "symbol",
+          "value": true
+        }
+      ],
+      "from": {
+        "key_code": "r",
         "modifiers": {
           "mandatory": [
             "any"
@@ -113,29 +136,6 @@
         }
       ],
       "from": {
-        "key_code": "r",
-        "modifiers": {
-          "mandatory": [
-            "any"
-          ]
-        }
-      },
-      "to": [
-        {
-          "key_code": "close_bracket"
-        }
-      ]
-    },
-    {
-      "type": "basic",
-      "conditions": [
-        {
-          "type": "variable_if",
-          "name": "symbol",
-          "value": true
-        }
-      ],
-      "from": {
         "key_code": "t",
         "modifiers": {
           "mandatory": [
@@ -145,7 +145,7 @@
       },
       "to": [
         {
-          "key_code": "slash"
+          "key_code": "open_bracket"
         }
       ]
     },
@@ -194,7 +194,7 @@
       },
       "to": [
         {
-          "key_code": "comma",
+          "key_code": "w",
           "modifiers": [
             "shift"
           ]
@@ -220,7 +220,7 @@
       },
       "to": [
         {
-          "key_code": "period",
+          "key_code": "e",
           "modifiers": [
             "shift"
           ]
@@ -272,7 +272,7 @@
       },
       "to": [
         {
-          "key_code": "equal_sign"
+          "key_code": "close_bracket"
         }
       ]
     },
@@ -347,7 +347,7 @@
       },
       "to": [
         {
-          "key_code": "hyphen",
+          "key_code": "quote",
           "modifiers": [
             "shift"
           ]
@@ -399,7 +399,7 @@
       },
       "to": [
         {
-          "key_code": "quote",
+          "key_code": "q",
           "modifiers": [
             "shift"
           ]
@@ -425,7 +425,7 @@
       },
       "to": [
         {
-          "key_code": "quote"
+          "key_code": "q"
         }
       ]
     },
@@ -448,7 +448,7 @@
       },
       "to": [
         {
-          "key_code": "open_bracket",
+          "key_code": "hyphen",
           "modifiers": [
             "shift"
           ]
@@ -474,7 +474,7 @@
       },
       "to": [
         {
-          "key_code": "close_bracket",
+          "key_code": "equal_sign",
           "modifiers": [
             "shift"
           ]
@@ -526,7 +526,7 @@
       },
       "to": [
         {
-          "key_code": "semicolon"
+          "key_code": "z"
         }
       ]
     },
@@ -575,7 +575,7 @@
       },
       "to": [
         {
-          "key_code": "hyphen"
+          "key_code": "quote"
         }
       ]
     },
@@ -598,7 +598,7 @@
       },
       "to": [
         {
-          "key_code": "equal_sign",
+          "key_code": "close_bracket",
           "modifiers": [
             "shift"
           ]
@@ -650,7 +650,7 @@
       },
       "to": [
         {
-          "key_code": "2",
+          "key_code": "z",
           "modifiers": [
             "shift"
           ]
@@ -676,7 +676,33 @@
       },
       "to": [
         {
-          "key_code": "semicolon",
+          "key_code": "grave_accent_and_tilde",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "symbol",
+          "value": true
+        }
+      ],
+      "from": {
+        "key_code": "comma",
+        "modifiers": {
+          "mandatory": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "2",
           "modifiers": [
             "shift"
           ]
@@ -725,7 +751,7 @@
       },
       "to": [
         {
-          "key_code": "slash",
+          "key_code": "open_bracket",
           "modifiers": [
             "shift"
           ]

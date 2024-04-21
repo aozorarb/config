@@ -3,8 +3,15 @@
 # karabiner-elements ver.14.13.0
 require 'json'
 require 'yaml'
-
-Alpha2Symbol = YAML.load_file('alpha2symbol-us.yml')
+puts `ls *.yml`
+puts 'Enter full file name>'
+Filename = gets.chomp
+if File.exist?(Filename)
+  Alpha2Symbol = YAML.load_file(Filename)
+else
+  puts 'Not found'
+  exit(1)
+end
 
 Json = {
   description: Alpha2Symbol['description'],
@@ -65,6 +72,6 @@ Alpha2Symbol['swap_keys'].each do |k, v|
 end
 
 
-File.open('symborak-us.json', 'w') do |file|
+File.open('symbol-out.json', 'w') do |file|
   file.puts JSON.pretty_generate(Json)
 end
