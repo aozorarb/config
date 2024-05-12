@@ -25,9 +25,6 @@ Json[:manipulators] << {
   type: 'basic',
   from: {
     key_code: Alpha2Symbol['symbol'],
-    modifiers: {
-      mandatory: ['any']
-    },
   },
   to: [{
     set_variable: {
@@ -40,6 +37,23 @@ Json[:manipulators] << {
       name: 'symbol',
       value: false
     }
+  }],
+  to_if_alone: [{
+    key_code: Alpha2Symbol['symbol']
+  }]
+}
+
+Json[:manipulators] << {
+  type: 'basic',
+  from: {
+    key_code: Alpha2Symbol['symbol'],
+    modifiers: {
+      mandatory: ['shift']
+    },
+  },
+  to: [{
+    key_code: Alpha2Symbol['symbol'],
+    modifiers: ['left_shift']
   }]
 }
 

@@ -1,0 +1,7 @@
+[[plugins]]
+repo = 'bkad/CamelCaseMotion'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+
+

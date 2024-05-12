@@ -16,7 +16,7 @@ set showmatch
 set tags+=./tags;
 
 " for Dvorak
-set keymap=dvorak-reverse-digits
+set keymap=dvorak
 
 packadd! matchit
 

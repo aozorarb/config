@@ -36,12 +36,11 @@ nnoremap <silent> [TABCMD]c :<c-u>tabclose<CR>
 nnoremap <silent> [TABCMD]o :<c-u>tabonly<CR>
 nnoremap <silent> [TABCMD]s :<c-u>tabs<CR>
 
-
 " source .vimrc
 nnoremap <leader>ss :<C-u>source $HOME/.vim/vimrc<CR>
 
 " edit .vim's directory
-nnoremap <leader>se :<C-u>e $HOME/.vim/.<CR>
+nnoremap <leader>se :<C-u>lcd $HOME/.vim/<CR> :e . <CR>
 
 
 " at_coder_friends
@@ -84,3 +83,6 @@ nnoremap <leader>ct  :!ctags -R .<CR>
 " enter method for mac jis keyboard to ansi
 inoremap <C-x>' `
 inoremap <C-x>- ~
+
+" normal gf can create new file
+nnoremap gf :e <cfile><CR>

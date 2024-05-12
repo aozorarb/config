@@ -1,7 +1,12 @@
+# Please single number surround by quote
+
 # key map with symbol key. X represents not use
-# ! [ ] # / X & < > | X X BS
-# = ( ) _ * " ' { } ^ S EN
-# ; % - + $ : ~ @ ` ? SHIFT
+# ! @ # $ % ^ & * ( ) { }
+# | ~ [ ] \ ` ← ↓ ↑ →
+#
+# ! & ← ↓ ↑ → # \ _ X X BS
+# [ ] ( ) * % { } | ^ S EN
+# 0 $ ` @ X ~ ' " X X SHIFT
 symbol: quote
 description: 'Symbol key(US dvorak)'
 
@@ -9,33 +14,36 @@ description: 'Symbol key(US dvorak)'
 # S-anykey: anykey with shift
 swap_keys:
   q: S-1
-  w: hyphen
-  e: equal_sign
-  r: S-3
-  t: open_bracket
-  u: S-7
-  i: S-w
-  o: S-e
-  p: S-backslash
+  w: S-7
+  e: left_arrow
+  r: up_arrow
+  t: down_arrow
+  # y
+  u: right_arrow
+  i: S-3
+  o: backslash
+  p: S-quote
+  # [
+  # ]
 
-  a: close_bracket
-  s: S-9
-  d: S-0
-  f: S-quote
+  a: hyphen
+  s: equal_sign
+  d: S-9
+  f: S-0
   g: S-8
-  h: S-q
-  j: q
-  k: S-hyphen 
-  l: S-equal_sign
+  h: S-5
+  j: S-open_bracket
+  k: S-close_bracket
+  l: S-backslash 
   semicolon: S-6
 
-  z: z
-  x: S-5
-  c: quote
-  v: S-close_bracket
-  b: S-4
-  n: S-z
-  m: S-grave_accent_and_tilde
-  comma: S-2
-  period: grave_accent_and_tilde
-  slash: S-open_bracket
+  z: '0'
+  x: S-4
+  c: grave_accent_and_tilde
+  v: S-2
+  # b
+  n: S-grave_accent_and_tilde
+  m: q
+  comma: S-q
+  # period
+  # slash
