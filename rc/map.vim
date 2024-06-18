@@ -84,5 +84,3 @@ nnoremap <leader>ct  :!ctags -R .<CR>
 inoremap <C-x>' `
 inoremap <C-x>- ~
 
-" normal gf can create new file
-nnoremap gf :e <cfile><CR>

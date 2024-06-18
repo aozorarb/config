@@ -23,15 +23,11 @@ call dein#begin(s:dein_base)
 call dein#add(s:dein_dir)
 
 " dein#load_toml for each ~/.vim/dein_tomls/*
-"ruby << RUBY
-"  toml_files = Dir.glob(File.expand_path('~/.vim/dein_tomls/*'))
-"  toml_files.each do |file|
-"    Vim.command("call dein#load_toml('#{file}')")
-"  end
-"RUBY
-let toml_files = glob(expand('~/.vim/dein_tomls/*'))
-for file in toml_files
-    execute 'call dein#load_toml("' . file . '")'
+for file in readdir(expand('$HOME/.vim/dein_tomls/'))
+    if file[0] is# '.'
+      continue
+    endif
+    execute 'call dein#load_toml("$HOME/.vim/dein_tomls/' . file . '")'
 endfor
 
 call dein#end()
@@ -46,7 +42,10 @@ if dein#check_install()
   call dein#install()
 endif
 
-let rc_files = glob(expand('~/.vim/rc/plugin/*'))
-for file in rc_files
-    execute 'source "' . file . '"'
+
+for file in readdir(expand('~/.vim/rc/plugin/'))
+  if file[0] is# '.'
+    continue
+  endif
+  execute 'source "$HOME/.vim/rc/plugin/' . file . '"'
 endfor

@@ -1,18 +1,34 @@
 # ruby ver.3.3.0
 # affected by https://github.com/mizunowanko/Symvorak/tree/SymbolOnly
 # karabiner-elements ver.14.13.0
+
 require 'json'
 require 'yaml'
-puts `ls *.yml`
-puts 'Enter full file name>'
-Filename = gets.chomp
-if File.exist?(Filename)
-  Alpha2Symbol = YAML.load_file(Filename)
-else
-  puts 'Not found'
-  exit(1)
-end
 
+Alpha2Symbol = YAML.load_file('alpha2symbol-us.yml')
+
+def input_filename
+  if ARGV[0] && File.exist?(ARGV[0])
+    return ARGV[0]
+  else
+    puts 'Enter symbol file name'
+    puts '---'
+    puts `ls *.yml`
+
+    filename = ''
+    until File.exist?(filename)
+      puts 'please retry' unless filename.empty?
+      puts
+      print '> '
+
+      filename = gets.chomp
+    end
+    return filename
+  end
+end
+    
+Filename = input_filename
+  
 Json = {
   description: Alpha2Symbol['description'],
   manipulators: [
@@ -89,3 +105,5 @@ end
 File.open('symbol-out.json', 'w') do |file|
   file.puts JSON.pretty_generate(Json)
 end
+
+puts 'success'

@@ -3,10 +3,11 @@
 # key map with symbol key. X represents not use
 # ! @ # $ % ^ & * ( ) { }
 # | ~ [ ] \ ` ← ↓ ↑ →
-#
-# ! & ← ↓ ↑ → # \ _ X X BS
-# [ ] ( ) * % { } | ^ S EN
-# 0 $ ` @ X ~ ' " X X SHIFT
+# -------------------------
+# ! & # ← ↓ ↑ → | \ _ X X BS
+# [ ] ( ) * % { } ^ X S EN
+# 0 $ ` @ 1 ~ ' " X X SHIFT
+
 symbol: quote
 description: 'Symbol key(US dvorak)'
 
@@ -15,12 +16,12 @@ description: 'Symbol key(US dvorak)'
 swap_keys:
   q: S-1
   w: S-7
-  e: left_arrow
-  r: up_arrow
+  e: S-3
+  r: left_arrow
   t: down_arrow
-  # y
+  y: up_arrow
   u: right_arrow
-  i: S-3
+  i: S-backslash
   o: backslash
   p: S-quote
   # [
@@ -32,16 +33,16 @@ swap_keys:
   f: S-0
   g: S-8
   h: S-5
-  j: S-open_bracket
-  k: S-close_bracket
-  l: S-backslash 
-  semicolon: S-6
+  j: S-hyphen
+  k: S-equal_sign
+  l: S-6
+  # semicolon
 
   z: '0'
   x: S-4
   c: grave_accent_and_tilde
   v: S-2
-  # b
+  b: '1'
   n: S-grave_accent_and_tilde
   m: q
   comma: S-q

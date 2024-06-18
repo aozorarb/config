@@ -2,13 +2,7 @@
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'vim-skk/skkeleton'
-
-[[plugins]]
 repo = 'tpope/vim-abolish'
-
-[[plugins]]
-repo = 'simeji/winresizer'
 
 [[plugins]]
 repo = 'lambdalisue/vim-guise'
