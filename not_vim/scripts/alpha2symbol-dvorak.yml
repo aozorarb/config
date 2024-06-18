@@ -26,7 +26,6 @@ swap_keys:
   p: S-quote
   # [
   # ]
-
   a: hyphen
   s: equal_sign
   d: S-9

@@ -5,7 +5,6 @@
 require 'json'
 require 'yaml'
 
-Alpha2Symbol = YAML.load_file('alpha2symbol-us.yml')
 
 def input_filename
   if ARGV[0] && File.exist?(ARGV[0])
@@ -28,6 +27,8 @@ def input_filename
 end
     
 Filename = input_filename
+
+Alpha2Symbol = YAML.load_file(Filename)
   
 Json = {
   description: Alpha2Symbol['description'],

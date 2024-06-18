@@ -1,5 +1,5 @@
 {
-  "description": "Symbol key(US)",
+  "description": "Symbol key(US dvorak)",
   "manipulators": [
     {
       "type": "basic",
@@ -92,7 +92,10 @@
       },
       "to": [
         {
-          "key_code": "open_bracket"
+          "key_code": "7",
+          "modifiers": [
+            "shift"
+          ]
         }
       ]
     },
@@ -141,7 +144,7 @@
       },
       "to": [
         {
-          "key_code": "close_bracket"
+          "key_code": "left_arrow"
         }
       ]
     },
@@ -164,7 +167,30 @@
       },
       "to": [
         {
-          "key_code": "slash"
+          "key_code": "down_arrow"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "symbol",
+          "value": true
+        }
+      ],
+      "from": {
+        "key_code": "y",
+        "modifiers": {
+          "mandatory": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "up_arrow"
         }
       ]
     },
@@ -187,10 +213,7 @@
       },
       "to": [
         {
-          "key_code": "7",
-          "modifiers": [
-            "shift"
-          ]
+          "key_code": "right_arrow"
         }
       ]
     },
@@ -205,58 +228,6 @@
       ],
       "from": {
         "key_code": "i",
-        "modifiers": {
-          "mandatory": [
-            "any"
-          ]
-        }
-      },
-      "to": [
-        {
-          "key_code": "comma",
-          "modifiers": [
-            "shift"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "basic",
-      "conditions": [
-        {
-          "type": "variable_if",
-          "name": "symbol",
-          "value": true
-        }
-      ],
-      "from": {
-        "key_code": "o",
-        "modifiers": {
-          "mandatory": [
-            "any"
-          ]
-        }
-      },
-      "to": [
-        {
-          "key_code": "period",
-          "modifiers": [
-            "shift"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "basic",
-      "conditions": [
-        {
-          "type": "variable_if",
-          "name": "symbol",
-          "value": true
-        }
-      ],
-      "from": {
-        "key_code": "p",
         "modifiers": {
           "mandatory": [
             "any"
@@ -282,7 +253,79 @@
         }
       ],
       "from": {
+        "key_code": "o",
+        "modifiers": {
+          "mandatory": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "backslash"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "symbol",
+          "value": true
+        }
+      ],
+      "from": {
+        "key_code": "p",
+        "modifiers": {
+          "mandatory": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "quote",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "symbol",
+          "value": true
+        }
+      ],
+      "from": {
         "key_code": "a",
+        "modifiers": {
+          "mandatory": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "hyphen"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "symbol",
+          "value": true
+        }
+      ],
+      "from": {
+        "key_code": "s",
         "modifiers": {
           "mandatory": [
             "any"
@@ -305,7 +348,7 @@
         }
       ],
       "from": {
-        "key_code": "s",
+        "key_code": "d",
         "modifiers": {
           "mandatory": [
             "any"
@@ -331,32 +374,6 @@
         }
       ],
       "from": {
-        "key_code": "d",
-        "modifiers": {
-          "mandatory": [
-            "any"
-          ]
-        }
-      },
-      "to": [
-        {
-          "key_code": "0",
-          "modifiers": [
-            "shift"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "basic",
-      "conditions": [
-        {
-          "type": "variable_if",
-          "name": "symbol",
-          "value": true
-        }
-      ],
-      "from": {
         "key_code": "f",
         "modifiers": {
           "mandatory": [
@@ -366,7 +383,7 @@
       },
       "to": [
         {
-          "key_code": "hyphen",
+          "key_code": "0",
           "modifiers": [
             "shift"
           ]
@@ -418,7 +435,7 @@
       },
       "to": [
         {
-          "key_code": "quote",
+          "key_code": "5",
           "modifiers": [
             "shift"
           ]
@@ -444,7 +461,10 @@
       },
       "to": [
         {
-          "key_code": "quote"
+          "key_code": "hyphen",
+          "modifiers": [
+            "shift"
+          ]
         }
       ]
     },
@@ -467,7 +487,7 @@
       },
       "to": [
         {
-          "key_code": "open_bracket",
+          "key_code": "equal_sign",
           "modifiers": [
             "shift"
           ]
@@ -485,32 +505,6 @@
       ],
       "from": {
         "key_code": "l",
-        "modifiers": {
-          "mandatory": [
-            "any"
-          ]
-        }
-      },
-      "to": [
-        {
-          "key_code": "close_bracket",
-          "modifiers": [
-            "shift"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "basic",
-      "conditions": [
-        {
-          "type": "variable_if",
-          "name": "symbol",
-          "value": true
-        }
-      ],
-      "from": {
-        "key_code": "semicolon",
         "modifiers": {
           "mandatory": [
             "any"
@@ -545,7 +539,7 @@
       },
       "to": [
         {
-          "key_code": "semicolon"
+          "key_code": "0"
         }
       ]
     },
@@ -560,81 +554,6 @@
       ],
       "from": {
         "key_code": "x",
-        "modifiers": {
-          "mandatory": [
-            "any"
-          ]
-        }
-      },
-      "to": [
-        {
-          "key_code": "5",
-          "modifiers": [
-            "shift"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "basic",
-      "conditions": [
-        {
-          "type": "variable_if",
-          "name": "symbol",
-          "value": true
-        }
-      ],
-      "from": {
-        "key_code": "c",
-        "modifiers": {
-          "mandatory": [
-            "any"
-          ]
-        }
-      },
-      "to": [
-        {
-          "key_code": "hyphen"
-        }
-      ]
-    },
-    {
-      "type": "basic",
-      "conditions": [
-        {
-          "type": "variable_if",
-          "name": "symbol",
-          "value": true
-        }
-      ],
-      "from": {
-        "key_code": "v",
-        "modifiers": {
-          "mandatory": [
-            "any"
-          ]
-        }
-      },
-      "to": [
-        {
-          "key_code": "equal_sign",
-          "modifiers": [
-            "shift"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "basic",
-      "conditions": [
-        {
-          "type": "variable_if",
-          "name": "symbol",
-          "value": true
-        }
-      ],
-      "from": {
-        "key_code": "b",
         "modifiers": {
           "mandatory": [
             "any"
@@ -660,7 +579,7 @@
         }
       ],
       "from": {
-        "key_code": "n",
+        "key_code": "c",
         "modifiers": {
           "mandatory": [
             "any"
@@ -669,10 +588,7 @@
       },
       "to": [
         {
-          "key_code": "semicolon",
-          "modifiers": [
-            "shift"
-          ]
+          "key_code": "grave_accent_and_tilde"
         }
       ]
     },
@@ -686,33 +602,7 @@
         }
       ],
       "from": {
-        "key_code": "m",
-        "modifiers": {
-          "mandatory": [
-            "any"
-          ]
-        }
-      },
-      "to": [
-        {
-          "key_code": "grave_accent_and_tilde",
-          "modifiers": [
-            "shift"
-          ]
-        }
-      ]
-    },
-    {
-      "type": "basic",
-      "conditions": [
-        {
-          "type": "variable_if",
-          "name": "symbol",
-          "value": true
-        }
-      ],
-      "from": {
-        "key_code": "comma",
+        "key_code": "v",
         "modifiers": {
           "mandatory": [
             "any"
@@ -738,7 +628,7 @@
         }
       ],
       "from": {
-        "key_code": "period",
+        "key_code": "b",
         "modifiers": {
           "mandatory": [
             "any"
@@ -747,7 +637,7 @@
       },
       "to": [
         {
-          "key_code": "grave_accent_and_tilde"
+          "key_code": "1"
         }
       ]
     },
@@ -761,7 +651,7 @@
         }
       ],
       "from": {
-        "key_code": "slash",
+        "key_code": "n",
         "modifiers": {
           "mandatory": [
             "any"
@@ -770,7 +660,56 @@
       },
       "to": [
         {
-          "key_code": "slash",
+          "key_code": "grave_accent_and_tilde",
+          "modifiers": [
+            "shift"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "symbol",
+          "value": true
+        }
+      ],
+      "from": {
+        "key_code": "m",
+        "modifiers": {
+          "mandatory": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "q"
+        }
+      ]
+    },
+    {
+      "type": "basic",
+      "conditions": [
+        {
+          "type": "variable_if",
+          "name": "symbol",
+          "value": true
+        }
+      ],
+      "from": {
+        "key_code": "comma",
+        "modifiers": {
+          "mandatory": [
+            "any"
+          ]
+        }
+      },
+      "to": [
+        {
+          "key_code": "q",
           "modifiers": [
             "shift"
           ]
