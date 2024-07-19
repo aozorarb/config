@@ -15,8 +15,6 @@ set backspace=indent,eol,start
 set showmatch
 set tags+=./tags;
 
-" for Dvorak
-set keymap=dvorak
 
 packadd! matchit
 
