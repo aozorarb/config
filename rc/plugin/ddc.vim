@@ -28,7 +28,6 @@ call ddc#custom#patch_global('sourceOptions', #{
       \ line: #{ mark: 'line' },
       \ })
 
-
 " source_params
 call ddc#custom#patch_global('sourceParams', #{
       \ _: #{ maxSize: 50 },

@@ -49,5 +49,7 @@ for file in readdir(expand('~/.vim/rc/plugin/'))
   if file[0] is# '.'
     continue
   endif
-  source "'~/.vim/rc/plugin/' . file"
+  let path = '~/.vim/rc/plugin/' . file
+  execute 'source' . path
 endfor
+

@@ -5,6 +5,7 @@ vim9script
 # *plugin*
 
 # *vim*
+
 # correct inconsistency
 nnoremap Y y$
 
@@ -50,14 +51,6 @@ nnoremap <leader>ss :<C-u>source $HOME/.vim/vimrc<CR>
 nnoremap <leader>se :<C-u>lcd $HOME/.vim/<CR> :e . <CR>
 
 
-# at_coder_friends
-nnoremap [ACFCMD] <nop>
-
-nmap     <leader>ac [ACFCMD]
-nnoremap [ACFCMD]t :! at_coder_friends test-all % <CR>
-nnoremap [ACFCMD]g :! at_coder_friends check-and-go % <CR>
-nnoremap [ACFCMD]s :! at_coder_friends submit % <CR>
-
 
 
 nnoremap <leader>h :nohl<CR>
@@ -89,6 +82,14 @@ inoremap <C-x>- ~
 
 
 # *plugin*
+
+# at_coder_friends
+nnoremap [ACFCMD] <nop>
+
+nmap     <leader>ac [ACFCMD]
+nnoremap [ACFCMD]t :! at_coder_friends test-all % <CR>
+nnoremap [ACFCMD]g :! at_coder_friends check-and-go % <CR>
+nnoremap [ACFCMD]s :! at_coder_friends submit % <CR>
 
 # easymotion
 map <Leader> <Plug>(easymotion-prefix)
