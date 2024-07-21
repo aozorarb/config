@@ -30,7 +30,7 @@ nnoremap X "_X
 vnoremap X "_X
 
 # leader = space
-var mapleader = "\<Space>"
+g:mapleader = "\<Space>"
 
 # tab
 # tab move can gt, gT
