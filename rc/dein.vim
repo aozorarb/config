@@ -22,13 +22,15 @@ call dein#begin(s:dein_base)
 
 call dein#add(s:dein_dir)
 
+
 " dein#load_toml for each ~/.vim/dein_tomls/*
-for file in readdir(expand('$HOME/.vim/dein_tomls/'))
-    if file[0] is# '.'
-      continue
-    endif
-    execute 'call dein#load_toml("$HOME/.vim/dein_tomls/' . file . '")'
+for file in readdir(expand('~/.vim/dein_tomls/'))
+  if file[0] is# '.'
+    continue
+  end
+  call dein#load_toml('~/.vim/dein_tomls/' . file)
 endfor
+
 
 call dein#end()
 
@@ -37,7 +39,7 @@ if len(dein#check_clean()) > 0
     call map(dein#check_clean(), "delete(v:val, 'rf')")
     call dein#recache_runtimepath()
 endif
-" Uncomment if you want to install not-installed plugins on startup.
+
 if dein#check_install()
   call dein#install()
 endif
@@ -47,5 +49,5 @@ for file in readdir(expand('~/.vim/rc/plugin/'))
   if file[0] is# '.'
     continue
   endif
-  execute 'source "$HOME/.vim/rc/plugin/' . file . '"'
+  source "'~/.vim/rc/plugin/' . file"
 endfor
