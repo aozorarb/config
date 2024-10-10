@@ -1,7 +1,7 @@
 set fileencodings=utf-8
 set history=200
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=4
 set ruler
 set scrolloff=3
 set nrformats-=ocatal
@@ -14,7 +14,7 @@ set wildmenu
 set backspace=indent,eol,start
 set showmatch
 set tags+=./tags;
-
+set autowrite
 
 packadd! matchit
 
