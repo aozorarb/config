@@ -9,8 +9,8 @@ call ddc#custom#patch_global('ui', 'native')
 
 " sources
 call ddc#custom#patch_global('sources', [
-      \ 'around', 'line', 'buffer'
-      \ ])
+      \ 'around', 'buffer', 'ctags'
+\ ])
 
 " source_options
 call ddc#custom#patch_global('sourceOptions', #{
@@ -25,23 +25,24 @@ call ddc#custom#patch_global('sourceOptions', #{
       \ },
       \ around: #{ mark: 'A' },
       \ buffer: #{ mark: 'B' },
-      \ line: #{ mark: 'line' },
-      \ })
+      \ ctags:  #{ mark: 'C' },
+\ })
 
 " source_params
 call ddc#custom#patch_global('sourceParams', #{
-      \ _: #{ maxSize: 50 },
+      \ _: #{ maxSize: 10 },
       \ buffer: #{
       \   requireSameFiletype: v:false,
       \   fromAltBuf: v:true,
       \   forceCollect: v:true
       \ },
-      \ })
+      \ ctags: #{ executable: '/usr/local/bin/ctags' }
+\ })
 
 
 " filter_params
 call ddc#custom#patch_global('filterParams', #{
       \ matcher_fuzzy: #{ splitMode: 'word' }
-      \ })
+\ })
 
 call ddc#enable()

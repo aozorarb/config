@@ -2,15 +2,19 @@
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
-repo = 'tpope/vim-abolish'
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'tpope/vim-obsession'
 
 [[plugins]]
 repo = 'lambdalisue/vim-guise'
 
-[[plugin]]
-repo = 'Shougo/deol.nvim'
+[[plugins]]
+repo = 'vim-test/vim-test'
 
 [[plugins]]
-repo = 'Shougo/pum.vim'
+repo = 'tpope/vim-rake'
 
-
+[[plugins]]
+repo = 'tpope/vim-projectionist'

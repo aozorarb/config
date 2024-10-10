@@ -1,11 +1,18 @@
 [[plugins]]
 repo = 'Shougo/ddc.vim'
 
-# ddc ui
+# *ui*
+# *filter*
+# *source*
+
+# *ui*
 [[plugins]]
 repo = 'Shougo/ddc-ui-native'
 
-# ddc filter
+[[plugins]]
+repo = 'Shougo/pum.vim'
+
+# *filter*
 [[plugins]]
 repo = 'Shougo/ddc-matcher_head'
 
@@ -18,6 +25,7 @@ repo = 'tani/ddc-fuzzy'
 [[plugins]]
 repo = 'Shougo/ddc-filter-converter_remove_overlap'
 
+
 # ddc source
 [[plugins]]
 repo = 'Shougo/ddc-source-around'
@@ -26,7 +34,10 @@ repo = 'Shougo/ddc-source-around'
 repo = 'matsui54/ddc-buffer'
 
 [[plugins]]
-repo = 'Shougo/ddc-source-line'
+repo = 'Shougo/deol.nvim'
+
+[[plugins]]
+repo = 'uga-rosa/denippet.vim'
 
 [[plugins]]
 repo = 'delphinus/ddc-ctags'

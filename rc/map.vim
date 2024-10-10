@@ -30,6 +30,8 @@ vnoremap x "_x
 nnoremap X "_X
 vnoremap X "_X
 
+inoremap <C-@> <Esc> 
+
 # leader = space
 g:mapleader = "\<Space>"
 
