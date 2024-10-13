@@ -50,7 +50,7 @@ nnoremap <silent> [TABCMD]s :<c-u>tabs<CR>
 nnoremap <leader>ss :<C-u>source $HOME/.vim/vimrc<CR>
 
 # edit .vim's directory
-nnoremap <leader>se :<C-u>lcd $HOME/.vim/<CR> :e . <CR>
+nnoremap <leader>se :call Edit_vimrc()<CR>
 
 
 

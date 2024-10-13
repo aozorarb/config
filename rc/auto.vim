@@ -1,6 +1,6 @@
 vim9script
 
-# target: *.out
+# target: *.out binary
 # effect: use xxd command for binary file
 augroup Binary
     au BufReadPre   *.out let &bin=1
@@ -13,12 +13,11 @@ augroup Binary
 augroup END
 
 
-# target: *.rb
+# target: *.rb ruby
 # effect: use 2 space indent 
 augroup Ruby
-    au BufReadPost *.rb {
+    au BufReadPost FileType ruby {
         set shiftwidth=2
         set tabstop=2
     }
 augroup END
-

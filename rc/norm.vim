@@ -1,13 +1,16 @@
 set fileencodings=utf-8
 set history=200
+
 set tabstop=4
+set softtabstop=0
 set shiftwidth=4
+set expandtab
+
 set ruler
 set scrolloff=3
 set nrformats-=ocatal
 set cursorline
 set hidden
-set expandtab
 set smartindent
 set incsearch
 set wildmenu
@@ -32,3 +35,5 @@ if has('persistent_undo') " undoがファイルを閉じても繋がるように
 	set undodir=~/.config/vim_undo
  set undofile
 endif
+
+let g:denops#deno = '/usr/local/bin/deno'
