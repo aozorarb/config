@@ -9,7 +9,8 @@ call ddc#custom#patch_global('ui', 'native')
 
 " sources
 call ddc#custom#patch_global('sources', [
-      \ 'around', 'buffer', 'ctags'
+      \ 'ctags', 'around', 'buffer',
+      \ 'lsp', 'mocword'
 \ ])
 
 " source_options
@@ -23,9 +24,11 @@ call ddc#custom#patch_global('sourceOptions', #{
       \   ],
       \   minAutoCompleteLength: 3,
       \ },
-      \ around: #{ mark: 'A' },
-      \ buffer: #{ mark: 'B' },
-      \ ctags:  #{ mark: 'C' },
+      \ around:  #{ mark: 'A' },
+      \ buffer:  #{ mark: 'B' },
+      \ ctags:   #{ mark: 'C' },
+      \ lsp: #{ mark: 'lsp'},
+      \ mocword: #{mark: 'moc', isVolatile: v:true},
 \ })
 
 " source_params

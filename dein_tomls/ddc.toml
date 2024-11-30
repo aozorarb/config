@@ -14,10 +14,10 @@ repo = 'Shougo/pum.vim'
 
 # *filter*
 [[plugins]]
-repo = 'Shougo/ddc-matcher_head'
+repo = 'Shougo/ddc-filter-matcher_head'
 
 [[plugins]]
-repo = 'Shougo/ddc-sorter_rank'
+repo = 'Shougo/ddc-filter-sorter_rank'
 
 [[plugins]]
 repo = 'tani/ddc-fuzzy'
@@ -34,10 +34,10 @@ repo = 'Shougo/ddc-source-around'
 repo = 'matsui54/ddc-buffer'
 
 [[plugins]]
-repo = 'Shougo/deol.nvim'
-
-[[plugins]]
-repo = 'uga-rosa/denippet.vim'
-
-[[plugins]]
 repo = 'delphinus/ddc-ctags'
+
+[[plugins]]
+repo = 'Shougo/ddc-source-lsp'
+
+[[plugins]]
+repo = 'Shougo/ddc-source-mocword'
