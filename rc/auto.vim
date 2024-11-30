@@ -1,5 +1,10 @@
 vim9script
 
+augroup filetype
+    au BufRead *.m set ft=mercury # not matlab
+augroup END
+
+
 # target: *.out binary
 # effect: use xxd command for binary file
 augroup Binary
@@ -16,8 +21,9 @@ augroup END
 # target: *.rb ruby
 # effect: use 2 space indent 
 augroup Ruby
-    au BufReadPost FileType ruby {
+    au BufReadPost *.rb {
         set shiftwidth=2
         set tabstop=2
     }
 augroup END
+
