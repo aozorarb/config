@@ -22,26 +22,25 @@ call ddc#custom#patch_global('sourceOptions', #{
       \     'converter_fuzzy',
       \     'converter_remove_overlap'
       \   ],
-      \   minAutoCompleteLength: 3,
+      \   minAutoCompleteLength: 2,
       \ },
       \ around:  #{ mark: 'A' },
       \ buffer:  #{ mark: 'B' },
       \ ctags:   #{ mark: 'C' },
       \ lsp: #{ mark: 'lsp'},
-      \ mocword: #{mark: 'moc', isVolatile: v:true},
+      \ mocword: #{mark: 'moc', isVolatile: v:true, maxItems: 5},
 \ })
+
 
 " source_params
 call ddc#custom#patch_global('sourceParams', #{
-      \ _: #{ maxSize: 10 },
-      \ buffer: #{
-      \   requireSameFiletype: v:false,
-      \   fromAltBuf: v:true,
-      \   forceCollect: v:true
-      \ },
-      \ ctags: #{ executable: '/usr/local/bin/ctags' }
+    \ buffer: #{
+    \   requireSameFiletype: v:false,
+    \   fromAltBuf: v:true,
+    \   forceCollect: v:true
+    \ },
+    \ ctags: #{ executable: '/usr/local/bin/ctags' },
 \ })
-
 
 " filter_params
 call ddc#custom#patch_global('filterParams', #{

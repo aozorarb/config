@@ -18,3 +18,6 @@ repo = 'tpope/vim-rake'
 
 [[plugins]]
 repo = 'tpope/vim-projectionist'
+
+[[plugins]]
+repo = 'khorser/vim-mercury'
