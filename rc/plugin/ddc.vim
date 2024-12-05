@@ -15,20 +15,21 @@ call ddc#custom#patch_global('sources', [
 
 " source_options
 call ddc#custom#patch_global('sourceOptions', #{
-      \ _: #{
-      \   matchers: ['matcher_fuzzy'],
-      \   sorters: ['sorter_fuzzy'],
-      \   converters: [
-      \     'converter_fuzzy',
-      \     'converter_remove_overlap'
-      \   ],
-      \   minAutoCompleteLength: 2,
-      \ },
-      \ around:  #{ mark: 'A' },
-      \ buffer:  #{ mark: 'B' },
-      \ ctags:   #{ mark: 'C' },
-      \ lsp: #{ mark: 'lsp'},
-      \ mocword: #{mark: 'moc', isVolatile: v:true, maxItems: 5},
+    \ _: #{
+    \   matchers: ['matcher_fuzzy'],
+    \   sorters: ['sorter_fuzzy'],
+    \   converters: [
+    \     'converter_fuzzy',
+    \     'converter_remove_overlap',
+    \     'converter_truncate'
+    \   ],
+    \   minAutoCompleteLength: 2,
+    \ },
+    \ around:  #{ mark: 'A' },
+    \ buffer:  #{ mark: 'B' },
+    \ ctags:   #{ mark: 'C' },
+    \ lsp: #{ mark: 'lsp'},
+    \ mocword: #{mark: 'moc', isVolatile: v:true, maxItems: 5},
 \ })
 
 
