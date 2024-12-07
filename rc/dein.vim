@@ -45,11 +45,7 @@ if dein#check_install()
 endif
 
 
-for file in readdir(expand('~/.vim/rc/plugin/'))
-  if file[0] is# '.'
-    continue
-  endif
-  let path = '~/.vim/rc/plugin/' . file
-  execute 'source' . path
+for file in glob("~/.vim/rc/plugin/*.*", 1, 1)
+  execute 'source' . file
 endfor
 

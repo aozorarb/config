@@ -3,6 +3,7 @@
 " *source_options*
 " *source_params*
 " *filter_params*
+" *denippet*
 
 " ui
 call ddc#custom#patch_global('ui', 'native')
@@ -10,7 +11,7 @@ call ddc#custom#patch_global('ui', 'native')
 " sources
 call ddc#custom#patch_global('sources', [
       \ 'ctags', 'around', 'buffer',
-      \ 'lsp', 'mocword'
+      \ 'lsp', 'denippet', 'mocword'
 \ ])
 
 " source_options
@@ -28,13 +29,15 @@ call ddc#custom#patch_global('sourceOptions', #{
     \ around:  #{ mark: 'A' },
     \ buffer:  #{ mark: 'B' },
     \ ctags:   #{ mark: 'C' },
-    \ lsp: #{ mark: 'lsp'},
-    \ mocword: #{mark: 'moc', isVolatile: v:true, maxItems: 5},
+    \ lsp:     #{ mark: 'lsp'},
+    \ denippet:#{ mark: 'denippet'},
+    \ mocword: #{ mark: 'moc', isVolatile: v:true, maxItems: 5},
 \ })
 
 
 " source_params
 call ddc#custom#patch_global('sourceParams', #{
+    \ _: #{ maxItems: 20},
     \ buffer: #{
     \   requireSameFiletype: v:false,
     \   fromAltBuf: v:true,
@@ -48,4 +51,9 @@ call ddc#custom#patch_global('filterParams', #{
       \ matcher_fuzzy: #{ splitMode: 'word' }
 \ })
 
+" denippet
+let denippet_paths = "~/.vim/rc/plugin/denippet/*.*"
+for file in glob(denippet_paths, 1, 1)
+  call denippet#load(file)
+endfor
 call ddc#enable()

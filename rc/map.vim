@@ -95,3 +95,10 @@ nnoremap [ACFCMD]s :! at_coder_friends submit % <CR>
 
 # easymotion
 map <Leader> <Plug>(easymotion-prefix)
+
+# denippet
+inoremap <C-l> <Plug>(denippet-expand)
+inoremap <expr> <Tab> denippet#jumpable() ? '<Plug>(denippet-jump-next)' : '<Tab>'
+snoremap <expr> <Tab> denippet#jumpable() ? '<Plug>(denippet-jump-next)' : '<Tab>'
+inoremap <expr> <S-Tab> denippet#jumpable(-1) ? '<Plug>(denippet-jump-prev)' : '<S-Tab>'
+snoremap <expr> <S-Tab> denippet#jumpable(-1) ? '<Plug>(denippet-jump-prev)' : '<S-Tab>'

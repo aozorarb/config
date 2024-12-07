@@ -1,0 +1,4 @@
+input_array_integer:
+  prefix: inarri
+  body: $1 = gets.split.map(&:to_i)
+
