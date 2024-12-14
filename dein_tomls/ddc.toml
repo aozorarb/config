@@ -42,7 +42,4 @@ repo = 'delphinus/ddc-ctags'
 repo = 'Shougo/ddc-source-lsp'
 
 [[plugins]]
-repo = 'Shougo/ddc-source-mocword'
-
-[[plugins]]
 repo = 'uga-rosa/denippet.vim'

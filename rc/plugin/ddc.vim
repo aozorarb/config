@@ -11,7 +11,7 @@ call ddc#custom#patch_global('ui', 'native')
 " sources
 call ddc#custom#patch_global('sources', [
       \ 'ctags', 'around', 'buffer',
-      \ 'lsp', 'denippet', 'mocword'
+      \ 'lsp', 'denippet'
 \ ])
 
 " source_options
@@ -31,7 +31,6 @@ call ddc#custom#patch_global('sourceOptions', #{
     \ ctags:   #{ mark: 'C' },
     \ lsp:     #{ mark: 'lsp'},
     \ denippet:#{ mark: 'denippet'},
-    \ mocword: #{ mark: 'moc', isVolatile: v:true, maxItems: 5},
 \ })
 
 
