@@ -45,7 +45,4 @@ if dein#check_install()
 endif
 
 
-for file in glob("~/.vim/rc/plugin/*.*", 1, 1)
-  execute 'source' . file
-endfor
 
