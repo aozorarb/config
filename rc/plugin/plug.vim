@@ -21,3 +21,5 @@ function! Clear_buffer_and_puts_clipboard() abort
         norm "*p
     endif
 endfunction
+
+
