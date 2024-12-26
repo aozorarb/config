@@ -105,3 +105,5 @@ snoremap <expr> <S-Tab> denippet#jumpable(-1) ? '<Plug>(denippet-jump-prev)' : '
 
 # git
 nnoremap <leader>gi :Git<Esc>
+
+# min-todo

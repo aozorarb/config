@@ -20,4 +20,4 @@ repo = 'tpope/vim-rake'
 repo = 'tpope/vim-projectionist'
 
 [[plugins]]
-repo = 'khorser/vim-mercury'
+repo = 'bun913/min-todo.vim'

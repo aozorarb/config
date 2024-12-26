@@ -20,6 +20,7 @@ set tags+=./tags;
 set autowrite
 
 packadd! matchit
+packadd! termdebug
 
 if has('termguicolors')
   set termguicolors
