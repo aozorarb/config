@@ -37,8 +37,3 @@ if has('persistent_undo') " undoがファイルを閉じても繋がるように
  set undofile
 endif
 
-let g:denops#deno = '/usr/local/bin/deno'
-
-for file in glob("~/.vim/rc/plugin/*.*", 1, 1)
-  execute 'source' . file
-endfor
