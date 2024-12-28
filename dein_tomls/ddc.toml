@@ -1,5 +1,6 @@
 [[plugins]]
 repo = 'Shougo/ddc.vim'
+depends = 'denops.vim'
 
 # *ui*
 # *filter*
@@ -8,6 +9,8 @@ repo = 'Shougo/ddc.vim'
 # *ui*
 [[plugins]]
 repo = 'Shougo/ddc-ui-native'
+on_source = 'ddc.vim'
+
 
 [[plugins]]
 repo = 'Shougo/pum.vim'
@@ -15,31 +18,41 @@ repo = 'Shougo/pum.vim'
 # *filter*
 [[plugins]]
 repo = 'Shougo/ddc-filter-matcher_head'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-filter-sorter_rank'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'tani/ddc-fuzzy'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-filter-converter_remove_overlap'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'matsui54/ddc-converter_truncate'
+on_source = 'ddc.vim'
 
 # *source*
 [[plugins]]
 repo = 'Shougo/ddc-source-around'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'matsui54/ddc-buffer'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'delphinus/ddc-ctags'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'Shougo/ddc-source-lsp'
+on_source = 'ddc.vim'
 
 [[plugins]]
 repo = 'uga-rosa/denippet.vim'
+on_source = 'ddc.vim'
