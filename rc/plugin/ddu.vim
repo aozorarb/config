@@ -1,4 +1,5 @@
 nnoremap <silent><leader>ff :call ddu#start({})<CR>
+
 call ddu#custom#patch_global(#{
     \   ui: 'ff',
     \   sources: [#{name: 'file_rec', params: {}}],
