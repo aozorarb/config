@@ -1,6 +1,6 @@
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
-hooks_file = '$PLUG_DIR/vim-lsp.vim'
+hooks_file = '$HOOK_DIR/vim-lsp.vim'
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
@@ -8,7 +8,7 @@ depens = 'vim-lsp'
 
 [[plugins]]
 repo = 'Shougo/pum.vim'
-hooks_file = '$PLUG_DIR/pum.vim'
+hooks_file = '$HOOK_DIR/pum.vim'
 
 [[plugins]]
 repo = 'tpope/vim-obsession'
@@ -18,7 +18,7 @@ repo = 'lambdalisue/vim-guise'
 
 [[plugins]]
 repo = 'vim-test/vim-test'
-hooks_file = '$PLUG_DIR/vim-test.vim'
+hooks_file = '$HOOK_DIR/vim-test.vim'
 
 [[plugins]]
 repo = 'tpope/vim-rake'

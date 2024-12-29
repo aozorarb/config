@@ -3,8 +3,8 @@ if &compatible
 endif
 
 let g:denops#deno = '/usr/local/bin/deno'
-let $BASE_DIR = expand('~/.vim/rc/')
-let $PLUG_DIR = expand('~/.vim/rc/plugin/')
+let $VIM_DIR = expand('~/.vim')
+let $HOOK_DIR = expand('$VIM_DIR/hooks')
 
 
 " other rcs load at g:dein_inline_vimrcs

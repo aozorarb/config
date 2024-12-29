@@ -24,11 +24,11 @@ let g:dein#auto_recache = v:true
 let g:dein#enable_notification = v:true
 
 let g:dein#inline_vimrcs = [
-      \ '$BASE_DIR/map.vim',
-      \ '$BASE_DIR/norm.vim',
-      \ '$BASE_DIR/function.vim',
-      \ '$BASE_DIR/netrw.vim',
-      \ '$BASE_DIR/auto.vim',
+      \ 'map.vim',
+      \ 'norm.vim',
+      \ 'function.vim',
+      \ 'netrw.vim',
+      \ 'auto.vim',
       \ ]
 
 execute 'set runtimepath+=' . s:dein_dir
@@ -37,10 +37,12 @@ call dein#begin(s:dein_base)
 
 call dein#add(s:dein_dir)
 
-call dein#load_toml('$BASE_DIR/dein.toml', #{ lazy: 0 })
-call dein#load_toml('$BASE_DIR/dein-lazy.toml', #{ lazy: 1 })
-call dein#load_toml('$BASE_DIR/ddc.toml', #{ lazy: 1 })
-call dein#load_toml('$BASE_DIR/ddu.toml', #{ lazy: 1 })
+let $TOML_DIR = expand('$VIM_DIR/tomls')
+
+call dein#load_toml('$TOML_DIR/dein.toml', #{ lazy: 0 })
+call dein#load_toml('$TOML_DIR/dein-lazy.toml', #{ lazy: 1 })
+call dein#load_toml('$TOML_DIR/ddc.toml', #{ lazy: 1 })
+call dein#load_toml('$TOML_DIR/ddu.toml', #{ lazy: 1 })
 
 call dein#end()
 call dein#save_state()
