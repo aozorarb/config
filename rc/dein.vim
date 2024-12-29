@@ -23,12 +23,13 @@ let s:dein_base = '~/.cache/dein/'
 let g:dein#auto_recache = v:true
 let g:dein#enable_notification = v:true
 
+let s:cd = expand('<sfile>')->fnamemodify(':h')
 let g:dein#inline_vimrcs = [
-      \ 'map.vim',
-      \ 'norm.vim',
-      \ 'function.vim',
-      \ 'netrw.vim',
-      \ 'auto.vim',
+      \ s:cd . '/map.vim',
+      \ s:cd . '/norm.vim',
+      \ s:cd . '/function.vim',
+      \ s:cd . '/netrw.vim',
+      \ s:cd . '/auto.vim',
       \ ]
 
 execute 'set runtimepath+=' . s:dein_dir
@@ -37,12 +38,12 @@ call dein#begin(s:dein_base)
 
 call dein#add(s:dein_dir)
 
-let $TOML_DIR = expand('$VIM_DIR/tomls')
+let s:toml_dir= expand('$VIM_DIR/tomls/')
 
-call dein#load_toml('$TOML_DIR/dein.toml', #{ lazy: 0 })
-call dein#load_toml('$TOML_DIR/dein-lazy.toml', #{ lazy: 1 })
-call dein#load_toml('$TOML_DIR/ddc.toml', #{ lazy: 1 })
-call dein#load_toml('$TOML_DIR/ddu.toml', #{ lazy: 1 })
+call dein#load_toml(s:toml_dir . '/dein.toml', #{ lazy: 0 })
+call dein#load_toml(s:toml_dir . '/dein-lazy.toml', #{ lazy: 1 })
+call dein#load_toml(s:toml_dir . '/ddc.toml', #{ lazy: 1 })
+call dein#load_toml(s:toml_dir . '/ddu.toml', #{ lazy: 1 })
 
 call dein#end()
 call dein#save_state()
