@@ -1,5 +1,6 @@
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
+hooks_file = '$BASE_DIR/vim-lsp.vim'
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'

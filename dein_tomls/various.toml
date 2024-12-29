@@ -1,4 +1,8 @@
 [[plugins]]
+repo = 'Shougo/pum.vim'
+hooks_file = '$BASE_DIR/pum.vim'
+
+[[plugins]]
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
@@ -12,6 +16,7 @@ repo = 'lambdalisue/vim-guise'
 
 [[plugins]]
 repo = 'vim-test/vim-test'
+hooks_file = '$BASE_DIR/vim-test.vim'
 
 [[plugins]]
 repo = 'tpope/vim-rake'

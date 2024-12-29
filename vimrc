@@ -3,17 +3,16 @@ if &compatible
 endif
 
 let g:denops#deno = '/usr/local/bin/deno'
+let $BASE_DIR = expand('~/.vim/rc/plugin')
 
 
+execute 'source $HOME/.vim/rc/function.vim'
 execute 'source $HOME/.vim/rc/map.vim'
 execute 'source $HOME/.vim/rc/norm.vim'
 execute 'source $HOME/.vim/rc/dein.vim'
 execute 'source $HOME/.vim/rc/netrw.vim'
 execute 'source $HOME/.vim/rc/auto.vim'
 
-for file in glob("~/.vim/rc/plugin/*.*", 1, 1)
-  execute 'source' . file
-endfor
 
 " lightline.vim
 set laststatus=2

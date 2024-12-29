@@ -16,23 +16,32 @@ endif
 
 "-- dein.vim config --
 let s:dein_base = '~/.cache/dein/'
-execute 'set runtimepath+=' . s:dein_dir
 
-call dein#begin(s:dein_base)
+function! Load_dein() abort
+  execute 'set runtimepath+=' . s:dein_dir
 
-call dein#add(s:dein_dir)
+  call dein#begin(s:dein_base)
 
-
-" dein#load_toml for each ~/.vim/dein_tomls/*
-for file in readdir(expand('~/.vim/dein_tomls/'))
-  if file[0] is# '.'
-    continue
-  end
-  call dein#load_toml('~/.vim/dein_tomls/' . file)
-endfor
+  call dein#add(s:dein_dir)
 
 
-call dein#end()
+  " dein#load_toml for each ~/.vim/dein_tomls/*
+  for file in readdir(expand('~/.vim/dein_tomls/'))
+    if file[0] is# '.'
+      continue
+    endif
+    call dein#load_toml('~/.vim/dein_tomls/' . file)
+  endfor
+
+
+  call dein#end()
+  call dein#save_state()
+endfunction
+
+if dein#load_state(s:dein_dir)
+    call Load_dein()
+endif
+
 
 " plugin remove check
 if len(dein#check_clean()) > 0
