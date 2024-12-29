@@ -19,7 +19,7 @@ repo = 'bkad/CamelCaseMotion'
 
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
-on_cmd = 'map  <Plug>(easymotion-prefix)'
+hook_add = 'map <leader> <Plug>(easymotion-prefix)'
 
 [[plugins]]
 repo = 'tpope/vim-surround'
@@ -34,5 +34,4 @@ repo = 'khorser/vim-mercury'
 # git
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-hooks_file = '$PLUG_DIR/vim-fugitive.vim'
-
+hook_add = 'nnoremap <leader>gi <cmd>Git<CR>'

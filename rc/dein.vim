@@ -17,10 +17,11 @@ endif
 "-- dein.vim config --
 let s:dein_base = '~/.cache/dein/'
 
-if !dein#min#load_state(s:dein_base)
-  finish
-endif
+"if !dein#min#load_state(s:dein_base)
+"  finish
+"endif
 let g:dein#auto_recache = v:true
+let g:dein#enable_notification = v:true
 
 let g:dein#inline_vimrcs = [
       \ '$BASE_DIR/map.vim',
