@@ -3,16 +3,12 @@ if &compatible
 endif
 
 let g:denops#deno = '/usr/local/bin/deno'
-let $BASE_DIR = expand('~/.vim/rc/plugin')
+let $BASE_DIR = expand('~/.vim/rc/')
+let $PLUG_DIR = expand('~/.vim/rc/plugin/')
 
 
-execute 'source $HOME/.vim/rc/function.vim'
-execute 'source $HOME/.vim/rc/map.vim'
-execute 'source $HOME/.vim/rc/norm.vim'
+" other rcs load at g:dein_inline_vimrcs
 execute 'source $HOME/.vim/rc/dein.vim'
-execute 'source $HOME/.vim/rc/netrw.vim'
-execute 'source $HOME/.vim/rc/auto.vim'
-
 
 " lightline.vim
 set laststatus=2

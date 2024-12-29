@@ -10,7 +10,7 @@ depends = 'denops.vim'
 [[plugins]]
 repo = 'Shougo/ddc-ui-native'
 on_source = 'ddc.vim'
-hooks_file = '$BASE_DIR/ddc.vim'
+hooks_file = '$PLUG_DIR/ddc.vim'
 
 
 # *filter*
@@ -56,4 +56,5 @@ on_source = 'ddc.vim'
 
 repo = 'uga-rosa/denippet.vim'
 on_source = 'ddc.vim'
-hooks_file = '$BASE_DIR/denippet.vim'
+hooks_file = '$PLUG_DIR/denippet.vim'
+

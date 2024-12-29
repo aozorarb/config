@@ -1,0 +1,38 @@
+hooks_file = '$PLUG_DIR/dein-ft.vim'
+
+
+[[plugins]]
+# important
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+# color scheme
+repo = 'cocopon/iceberg.vim'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+# motion
+
+[[plugins]]
+repo = 'bkad/CamelCaseMotion'
+
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+on_cmd = 'map  <Plug>(easymotion-prefix)'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+# syntaxs 
+[[plugins]]
+repo = 'ARM9/arm-syntax-vim'
+
+[[plugins]]
+repo = 'khorser/vim-mercury'
+
+# git
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+hooks_file = '$PLUG_DIR/vim-fugitive.vim'
+

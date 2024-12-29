@@ -17,41 +17,43 @@ endif
 "-- dein.vim config --
 let s:dein_base = '~/.cache/dein/'
 
-function! Load_dein() abort
-  execute 'set runtimepath+=' . s:dein_dir
+if !dein#min#load_state(s:dein_base)
+  finish
+endif
+let g:dein#auto_recache = v:true
 
-  call dein#begin(s:dein_base)
+let g:dein#inline_vimrcs = [
+      \ '$BASE_DIR/map.vim',
+      \ '$BASE_DIR/norm.vim',
+      \ '$BASE_DIR/function.vim',
+      \ '$BASE_DIR/netrw.vim',
+      \ '$BASE_DIR/auto.vim',
+      \ ]
 
-  call dein#add(s:dein_dir)
+execute 'set runtimepath+=' . s:dein_dir
 
+call dein#begin(s:dein_base)
 
-  " dein#load_toml for each ~/.vim/dein_tomls/*
-  for file in readdir(expand('~/.vim/dein_tomls/'))
-    if file[0] is# '.'
-      continue
-    endif
-    call dein#load_toml('~/.vim/dein_tomls/' . file)
-  endfor
+call dein#add(s:dein_dir)
 
+call dein#load_toml('$BASE_DIR/dein.toml', #{ lazy: 0 })
+call dein#load_toml('$BASE_DIR/dein-lazy.toml', #{ lazy: 1 })
+call dein#load_toml('$BASE_DIR/ddc.toml', #{ lazy: 1 })
+call dein#load_toml('$BASE_DIR/ddu.toml', #{ lazy: 1 })
 
-  call dein#end()
-  call dein#save_state()
-endfunction
+call dein#end()
+call dein#save_state()
 
-if dein#load_state(s:dein_dir)
-    call Load_dein()
+if bufname('%') !=# ''
+  filetype detect
 endif
 
-
-" plugin remove check
-if len(dein#check_clean()) > 0
-    call map(dein#check_clean(), "delete(v:val, 'rf')")
-    call dein#recache_runtimepath()
-endif
-
-if dein#check_install()
-  call dein#install()
-endif
-
-
-
+" " plugin remove check
+" if len(dein#check_clean()) > 0
+"     call map(dein#check_clean(), "delete(v:val, 'rf')")
+"     call dein#recache_runtimepath()
+" endif
+" 
+" if dein#check_install()
+"   call dein#install()
+" endif

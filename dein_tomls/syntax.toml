@@ -1,5 +1,0 @@
-[[plugins]]
-repo = 'ARM9/arm-syntax-vim'
-
-[[plugins]]
-repo = 'khorser/vim-mercury'
