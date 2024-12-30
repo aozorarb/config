@@ -1,4 +1,5 @@
-nnoremap <silent><leader>ff :call ddu#start({})<CR>
+" ddu {{{
+nnoremap <silent><leader><leader>f :call ddu#start({})<CR>
 
 call ddu#custom#patch_global(#{
     \   ui: 'ff',
@@ -31,3 +32,4 @@ endfunction
 
 autocmd User Ddu:uiDone ++nested
       \ call ddu#ui#async_action('openFilterWindow')
+" }}}

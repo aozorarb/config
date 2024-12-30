@@ -8,7 +8,7 @@
 [[plugins]]
 repo = 'Shougo/ddu.vim'
 depends = 'denops.vim'
-on_event = 'CursorHold'
+on_event = 'VimEnter'
 hooks_file = '$HOOK_DIR/ddu.vim'
 
 # ui

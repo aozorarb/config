@@ -1,3 +1,5 @@
+" ddc {{{
+
 " *ui*
 " *sources*
 " *source_options*
@@ -56,3 +58,4 @@ for file in glob(denippet_paths, 1, 1)
   call denippet#load(file)
 endfor
 call ddc#enable()
+" }}}

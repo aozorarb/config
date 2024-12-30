@@ -1,3 +1,4 @@
+" denippet {{{
 inoremap <C-l> <Plug>(denippet-expand)
 inoremap <expr> <Tab> denippet#jumpable() ? '<Plug>(denippet-jump-next)' : '<Tab>'
 snoremap <expr> <Tab> denippet#jumpable() ? '<Plug>(denippet-jump-next)' : '<Tab>'
@@ -13,4 +14,4 @@ for file in readdir(s:cd . '/denippet')
 
   call denippet#load(s:cd . '/denippet/' . file)
 endfor
-
+" }}}
