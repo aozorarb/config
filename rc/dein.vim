@@ -17,9 +17,9 @@ endif
 "-- dein.vim config --
 let s:dein_base = '~/.cache/dein/'
 
-"if !dein#min#load_state(s:dein_base)
-"  finish
-"endif
+if !dein#min#load_state(s:dein_base)
+  finish
+endif
 let g:dein#auto_recache = v:true
 let g:dein#enable_notification = v:true
 
@@ -52,12 +52,12 @@ if bufname('%') !=# ''
   filetype detect
 endif
 
-" " plugin remove check
-" if len(dein#check_clean()) > 0
-"     call map(dein#check_clean(), "delete(v:val, 'rf')")
-"     call dein#recache_runtimepath()
-" endif
-" 
-" if dein#check_install()
-"   call dein#install()
-" endif
+ " plugin remove check
+ if len(dein#check_clean()) > 0
+     call map(dein#check_clean(), "delete(v:val, 'rf')")
+     call dein#recache_runtimepath()
+ endif
+ 
+ if dein#check_install()
+   call dein#install()
+ endif

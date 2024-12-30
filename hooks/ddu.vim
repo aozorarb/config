@@ -1,12 +1,24 @@
 " hook_source {{{
-nnoremap <silent><leader>f :call ddu#start({})<CR>
+nnoremap <leader>f <cmd>call ddu#start({})<CR>
+nnoremap <leader>r <cmd>DduRg<CR>
+
 
 call ddu#custom#patch_global(#{
     \   ui: 'ff',
-    \   sources: [#{name: 'file_rec', params: {}}],
+    \   sources: [
+    \     #{name: 'buffer'},
+    \     #{name: 'register'},
+    \     #{name: 'file_rec'},
+    \     #{name: 'line'},
+    \   ],
     \   sourceOptions: #{
     \     _: #{
     \       matchers: ['matcher_substring'],
+    \     },
+    \   },
+    \   sourceParams: #{
+    \     rg: #{
+    \       args: ['--json'],
     \     },
     \   },
     \   kindOptions: #{

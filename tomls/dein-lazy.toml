@@ -1,7 +1,7 @@
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 on_event = 'VimEnter'
-hooks_file = '$HOOK_DIR/vim-lsp.vim'
+hook_source = 'let g:lsp_document_code_action_signs_enabled = 0'
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'

@@ -25,8 +25,34 @@ on_source = 'ddu.vim'
 # source
 [[plugins]]
 repo = 'Shougo/ddu-source-file_rec'
-on_source = ['ddu.vim', 'ddu-kind-file']
+on_source = 'ddu.vim'
+depends = 'ddu-kind-file'
 
+
+[[plugins]]
+repo = 'shun/ddu-source-buffer'
+on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'Shougo/ddu-source-line'
+on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'shun/ddu-source-rg'
+on_source = 'ddu.vim'
+
+[[plugins]]
+repo = 'Shougo/ddu-source-register'
+on_source = 'ddu.vim'
+
+# they cannot start. research
+# [[plugins]]
+# repo = 'lambdalisue/vim-kensaku'
+# on_source = 'ddu.vim'
+# 
+# [[plugins]]
+# repo = 'Milly/ddu-filter-kensaku'
+# on_source = 'vim-kensaku'
 
 # filter
 [[plugins]]
