@@ -1,6 +1,8 @@
 [[plugins]]
 repo = 'Shougo/ddc.vim'
 depends = 'denops.vim'
+on_event = ['InsertEnter', 'CmdlineEnter']
+hooks_file = '$HOOK_DIR/ddc.vim'
 
 # *ui*
 # *filter*
@@ -10,7 +12,6 @@ depends = 'denops.vim'
 [[plugins]]
 repo = 'Shougo/ddc-ui-native'
 on_source = 'ddc.vim'
-hooks_file = '$HOOK_DIR/ddc.vim'
 
 
 # *filter*
@@ -53,7 +54,6 @@ depends = 'vim-lsp'
 on_source = 'ddc.vim'
 
 [[plugins]]
-
 repo = 'uga-rosa/denippet.vim'
 on_source = 'ddc.vim'
 hooks_file = '$HOOK_DIR/denippet.vim'

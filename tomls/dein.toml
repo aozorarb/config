@@ -14,24 +14,7 @@ repo = 'itchyny/lightline.vim'
 
 # motion
 
-[[plugins]]
-repo = 'bkad/CamelCaseMotion'
+# [[plugins]]
+# repo = 'bkad/CamelCaseMotion'
 
-[[plugins]]
-repo = 'easymotion/vim-easymotion'
-hook_add = 'map <leader> <Plug>(easymotion-prefix)'
 
-[[plugins]]
-repo = 'tpope/vim-surround'
-
-# syntaxs 
-[[plugins]]
-repo = 'ARM9/arm-syntax-vim'
-
-[[plugins]]
-repo = 'khorser/vim-mercury'
-
-# git
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-hook_add = 'nnoremap <leader>gi <cmd>Git<CR>'

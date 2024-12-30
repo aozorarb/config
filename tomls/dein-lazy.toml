@@ -1,31 +1,61 @@
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
+on_event = 'VimEnter'
 hooks_file = '$HOOK_DIR/vim-lsp.vim'
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
 depens = 'vim-lsp'
+on_source = 'vim-lsp'
+
 
 [[plugins]]
-repo = 'Shougo/pum.vim'
-hooks_file = '$HOOK_DIR/pum.vim'
+repo = 'easymotion/vim-easymotion'
+on_event = 'CursorHold'
+hook_add = 'map <leader> <Plug>(easymotion-prefix)'
 
 [[plugins]]
-repo = 'tpope/vim-obsession'
+repo = 'tpope/vim-surround'
+on_event = 'CursorHold'
+
+# [[plugins]]
+# repo = 'Shougo/pum.vim'
+# hooks_file = '$HOOK_DIR/pum.vim'
+# on_event = 'CursorHold'
+
+# [[plugins]]
+# repo = 'tpope/vim-obsession'
 
 [[plugins]]
 repo = 'lambdalisue/vim-guise'
+on_event = 'CursorHold'
 
 [[plugins]]
 repo = 'vim-test/vim-test'
 hooks_file = '$HOOK_DIR/vim-test.vim'
 
-[[plugins]]
-repo = 'tpope/vim-rake'
+# [[plugins]]
+# repo = 'tpope/vim-rake'
+# on_event = 'CursorHold'
 
-[[plugins]]
-repo = 'tpope/vim-projectionist'
+# [[plugins]]
+# repo = 'tpope/vim-projectionist'
 
 [[plugins]]
 repo = 'bun913/min-todo.vim'
+on_event = 'CursorHold'
 
+# syntaxs 
+[[plugins]]
+repo = 'ARM9/arm-syntax-vim'
+on_ft = 'asm'
+
+[[plugins]]
+repo = 'khorser/vim-mercury'
+on_ft = 'mercury'
+
+# git
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+on_map = { n = '<leader>gi' }
+hook_source = 'nnoremap <leader>gi <cmd>Git<CR>'
