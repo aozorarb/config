@@ -1,17 +1,15 @@
-" denippet {{{
+" hook_source {{{
 inoremap <C-l> <Plug>(denippet-expand)
 inoremap <expr> <Tab> denippet#jumpable() ? '<Plug>(denippet-jump-next)' : '<Tab>'
 snoremap <expr> <Tab> denippet#jumpable() ? '<Plug>(denippet-jump-next)' : '<Tab>'
 inoremap <expr> <S-Tab> denippet#jumpable(-1) ? '<Plug>(denippet-jump-prev)' : '<S-Tab>'
 snoremap <expr> <S-Tab> denippet#jumpable(-1) ? '<Plug>(denippet-jump-prev)' : '<S-Tab>'
 
-let s:cd = expand('<sfile>')->fnamemodify(':h')
-
-for file in readdir(s:cd . '/denippet')
+let s:dir = expand('~/.vim/hooks/denippet/')
+for file in readdir(s:dir)
   if file[0] is# '.'
     continue
   endif
-
-  call denippet#load(s:cd . '/denippet/' . file)
+  call denippet#load(s:dir . file)
 endfor
 " }}}

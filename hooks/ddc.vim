@@ -1,4 +1,4 @@
-" ddc {{{
+" hook_source {{{
 
 " *ui*
 " *sources*

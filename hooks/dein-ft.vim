@@ -1,6 +1,3 @@
-" hook_add {{{
-" }}}
-
 " ruby {{{
 setlocal iskeyword+=!
 setlocal iskeyword+=?

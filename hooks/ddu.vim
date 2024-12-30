@@ -1,5 +1,5 @@
-" ddu {{{
-nnoremap <silent><leader><leader>f :call ddu#start({})<CR>
+" hook_source {{{
+nnoremap <silent><leader>f :call ddu#start({})<CR>
 
 call ddu#custom#patch_global(#{
     \   ui: 'ff',
