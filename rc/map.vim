@@ -16,7 +16,7 @@ nnoremap gk k
 
 " change almost do not use key
 noremap S $
-nnoremap _ :ter<CR> 
+nnoremap __ :ter<CR> 
 
 " Command mode move
 " C-h: <BS>, C-j: <CR>

@@ -1,5 +1,5 @@
 " hook_source {{{
-nnoremap <leader>f <cmd>call ddu#start({})<CR>
+nnoremap <leader>u <cmd>call ddu#start({})<CR>
 nnoremap <leader>r <cmd>DduRg<CR>
 
 

@@ -2,7 +2,7 @@ if &compatible
   set nocompatible
 endif
 
-let g:denops#deno = '/usr/local/bin/deno'
+let g:denops#deno = '/opt/homebrew/bin/deno'
 let $VIM_DIR = expand('~/.vim')
 let $HOOK_DIR = expand('$VIM_DIR/hooks')
 

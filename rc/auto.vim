@@ -49,14 +49,3 @@ augroup ArmAsm
     set filetype=arm
   }
 augroup END
-
-
-" target: todo.txt, todo.md, todo, TODO
-augroup Todo
-  au FileType todo {
-    nnoremap <buffer>T :ToggleTask<CR>
-    nnoremap <buffer>C :CreateTask<CR>A
-    nnoremap <buffer>gC :CreateTask<CR>
-    nnoremap <buffer><leader>a :ArchiveTasks<CR>
-  }
-augroup END
