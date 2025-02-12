@@ -35,7 +35,7 @@ function! s:ddu_my_settings() abort
         \ <Cmd>call ddu#ui#do_action('itemAction')<CR>
   nnoremap <buffer><silent> <Space>
         \ <Cmd>call ddu#ui#do_action('toggleSelectItem')<CR>
-  nnoremap <buffer><silent> i
+  nnoremap <buffer><silent> /
         \ <Cmd>call ddu#ui#do_action('openFilterWindow')<CR>
   nnoremap <buffer><silent> q
         \ <Cmd>call ddu#ui#do_action('quit')<CR>
