@@ -1,9 +1,9 @@
 set fileencodings=utf-8
 set history=200
 
-set tabstop=4
+set tabstop=2
 set softtabstop=0
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 
 set ruler

@@ -43,9 +43,7 @@ call dein#load_toml(s:toml_dir . '/dein-lazy.toml', #{ lazy: 1 })
 call dein#load_toml(s:toml_dir . '/ddc.toml', #{ lazy: 1 })
 call dein#load_toml(s:toml_dir . '/ddu.toml', #{ lazy: 1 })
 
-call dein#recache_runtimepath()
 call dein#end()
-call dein#save_state()
 
 if bufname('%') !=# ''
   filetype detect
@@ -60,3 +58,7 @@ endif
  if dein#check_install()
    call dein#install()
  endif
+
+ let g:dein#ftplugin = #{
+       \ _: 'call dein#recache_runtimepath()'
+       \ }

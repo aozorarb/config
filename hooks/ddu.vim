@@ -33,6 +33,8 @@ autocmd FileType ddu-ff call s:ddu_my_settings()
 function! s:ddu_my_settings() abort
   nnoremap <buffer><silent> <CR>
         \ <Cmd>call ddu#ui#do_action('itemAction')<CR>
+  nnoremap <buffer><silent> o
+        \ <Cmd>call ddu#ui#do_action('preview')<CR>
   nnoremap <buffer><silent> <Space>
         \ <Cmd>call ddu#ui#do_action('toggleSelectItem')<CR>
   nnoremap <buffer><silent> /
@@ -45,3 +47,4 @@ endfunction
 autocmd User Ddu:uiDone ++nested
       \ call ddu#ui#async_action('openFilterWindow')
 " }}}
+
