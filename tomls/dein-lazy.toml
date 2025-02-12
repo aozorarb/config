@@ -12,11 +12,22 @@ on_source = 'vim-lsp'
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
 on_event = 'CursorHold'
-hook_add = 'map <leader> <Plug>(easymotion-prefix)'
+hook_add = 'map - <Plug>(easymotion-prefix)'
 
 [[plugins]]
 repo = 'tpope/vim-surround'
 on_event = 'CursorHold'
+
+[[plugins]]
+repo = 'chaoren/vim-wordmotion'
+on_event = 'VimEnter'
+hook_add = '''
+let g:wordmotion_nomap = v:true 
+nmap _w w
+nmap _e e
+nmap _b b
+nmap _ge ge
+'''
 
 # [[plugins]]
 # repo = 'Shougo/pum.vim'
@@ -34,9 +45,9 @@ on_event = 'CursorHold'
 repo = 'vim-test/vim-test'
 hooks_file = '$HOOK_DIR/vim-test.vim'
 
-# [[plugins]]
-# repo = 'tpope/vim-rake'
-# on_event = 'CursorHold'
+ [[plugins]]
+repo = 'tpope/vim-rake'
+on_event = 'CursorHold'
 
 # [[plugins]]
 # repo = 'tpope/vim-projectionist'
@@ -57,5 +68,5 @@ on_ft = 'mercury'
 # git
 [[plugins]]
 repo = 'tpope/vim-fugitive'
-on_map = { n = '<leader>gi' }
+on_event = 'VimEnter'
 hook_source = 'nnoremap <leader>gi <cmd>Git<CR>'

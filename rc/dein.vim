@@ -20,7 +20,6 @@ let s:dein_base = '~/.cache/dein/'
 if !dein#min#load_state(s:dein_base)
   finish
 endif
-let g:dein#auto_recache = v:true
 let g:dein#enable_notification = v:true
 
 let s:cd = expand('<sfile>')->fnamemodify(':h')
@@ -31,7 +30,6 @@ let g:dein#inline_vimrcs = [
       \ s:cd . '/netrw.vim',
       \ s:cd . '/auto.vim',
       \ ]
-
 execute 'set runtimepath+=' . s:dein_dir
 
 call dein#begin(s:dein_base)
@@ -45,6 +43,7 @@ call dein#load_toml(s:toml_dir . '/dein-lazy.toml', #{ lazy: 1 })
 call dein#load_toml(s:toml_dir . '/ddc.toml', #{ lazy: 1 })
 call dein#load_toml(s:toml_dir . '/ddu.toml', #{ lazy: 1 })
 
+call dein#recache_runtimepath()
 call dein#end()
 call dein#save_state()
 

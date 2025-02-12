@@ -53,8 +53,8 @@ repo = 'Shougo/ddc-source-lsp'
 depends = 'vim-lsp'
 on_source = 'ddc.vim'
 
-[[plugins]]
-repo = 'uga-rosa/denippet.vim'
-on_source = 'ddc.vim'
-hooks_file = '$HOOK_DIR/denippet.vim'
+# [[plugins]]
+# repo = 'uga-rosa/denippet.vim'
+# on_source = 'ddc.vim'
+# hooks_file = '$HOOK_DIR/denippet.vim'
 
