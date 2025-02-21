@@ -44,7 +44,7 @@ function! s:ddu_my_settings() abort
 endfunction
 
 
-autocmd User Ddu:uiDone ++nested
-      \ call ddu#ui#async_action('openFilterWindow')
+" autocmd User Ddu:uiDone ++nested
+"       \ call ddu#ui#async_action('openFilterWindow')
 " }}}
 

@@ -43,7 +43,7 @@ call ddc#custom#patch_global('sourceParams', #{
     \   fromAltBuf: v:true,
     \   forceCollect: v:true
     \ },
-    \ ctags: #{ executable: '/usr/local/bin/ctags' },
+    \ ctags: #{ executable: '/opt/homebrew/bin/ctags' },
 \ })
 
 " filter_params
