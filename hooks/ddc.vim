@@ -9,7 +9,6 @@
 
 " ui
 call ddc#custom#patch_global('ui', 'native')
-
 " sources
 call ddc#custom#patch_global('sources', [
       \ 'ctags', 'around', 'buffer',

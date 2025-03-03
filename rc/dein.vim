@@ -16,6 +16,7 @@ endif
 
 "-- dein.vim config --
 let s:dein_base = '~/.cache/dein/'
+let g:dein#auto_recache = v:true
 
 if !dein#min#load_state(s:dein_base)
   finish
@@ -44,6 +45,7 @@ call dein#load_toml(s:toml_dir . '/ddc.toml', #{ lazy: 1 })
 call dein#load_toml(s:toml_dir . '/ddu.toml', #{ lazy: 1 })
 
 call dein#end()
+call dein#save_state()
 
 if bufname('%') !=# ''
   filetype detect
@@ -60,5 +62,5 @@ endif
  endif
 
  let g:dein#ftplugin = #{
-       \ _: 'call dein#recache_runtimepath()'
+       \ _: 'echo 555'
        \ }
