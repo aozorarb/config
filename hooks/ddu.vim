@@ -25,16 +25,23 @@ call ddu#custom#patch_global(#{
     \     file: #{
     \       defaultAction: 'open',
     \     },
+    \   },
+    \   actionOptions: #{
+    \     execute: #{ quit: v:false }
     \   }
     \ })
 
 
-autocmd FileType ddu-ff call s:ddu_my_settings()
+autocmd! FileType ddu-ff call s:ddu_my_settings()
 function! s:ddu_my_settings() abort
   nnoremap <buffer><silent> <CR>
         \ <Cmd>call ddu#ui#do_action('itemAction')<CR>
-  nnoremap <buffer><silent> o
+  nnoremap <buffer><silent> p
         \ <Cmd>call ddu#ui#do_action('preview')<CR>
+  nnoremap <buffer><silent> s
+        \ <Cmd>call ddu#ui#do_action('itemAction', #{name: 'execute', params: #{command: 'split'}})<CR>
+  nnoremap <buffer><silent> v
+        \ <Cmd>call ddu#ui#do_action('itemAction', #{name: 'execute', params: #{command: 'vsplit'}})<CR>
   nnoremap <buffer><silent> <Space>
         \ <Cmd>call ddu#ui#do_action('toggleSelectItem')<CR>
   nnoremap <buffer><silent> /
