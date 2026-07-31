@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/aozora/.vim/hooks'
+let g:netrw_dirhist_7='/Users/aozora/pcode/rough_diary/lib/rough_diary'
+let g:netrw_dirhist_6='/Users/aozora/pcode/rough_diary/lib/simple_cli'
+let g:netrw_dirhist_5='/Users/aozora/pcode/rough_diary/lib/rough_diary'
+let g:netrw_dirhist_4='/Users/aozora/pcode/rough_diary/note'
+let g:netrw_dirhist_3='/Users/aozora/pcode/rough_diary/test'
+let g:netrw_dirhist_2='/Users/aozora/pcode/rough_diary/note'
+let g:netrw_dirhist_1='/Users/aozora/.vim'

@@ -1,11 +1,9 @@
-set transparency=30
-
 function! NoTransparency() abort
   set transparency=0
 endfunction
 
 function! Transparency() abort
-  set transparency=30
+  set transparency=20
 endfunction
 
 function! UpTransparency() abort
@@ -15,6 +13,4 @@ endfunction
 function! DownTransparency() abort
   set transparency-=10
 endfunction
-
-
 

@@ -9,10 +9,10 @@
 
 " ui
 call ddc#custom#patch_global('ui', 'native')
+
 " sources
 call ddc#custom#patch_global('sources', [
       \ 'ctags', 'around', 'buffer',
-      \ 'lsp'
 \ ])
 
 " source_options
@@ -30,7 +30,6 @@ call ddc#custom#patch_global('sourceOptions', #{
     \ around:  #{ mark: 'A' },
     \ buffer:  #{ mark: 'B' },
     \ ctags:   #{ mark: 'C' },
-    \ lsp:     #{ mark: 'lsp'},
 \ })
 
 
@@ -51,9 +50,10 @@ call ddc#custom#patch_global('filterParams', #{
 \ })
 
 " denippet
-let denippet_paths = "~/.vim/rc/plugin/denippet/*.*"
-for file in glob(denippet_paths, 1, 1)
-  call denippet#load(file)
-endfor
+" let denippet_paths = "~/.vim/rc/plugin/denippet/*.*"
+" for file in glob(denippet_paths, 1, 1)
+"   call denippet#load(file)
+" endfor
 call ddc#enable()
 " }}}
+

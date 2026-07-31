@@ -51,11 +51,7 @@ nnoremap <leader>ss :<C-u>source $HOME/.vim/vimrc<CR>
 " edit .vim's directory
 nnoremap <leader>se :call Edit_vimrc()<CR>
 
-
-
-
 nnoremap <leader>h :nohl<CR>
-
 
 " only macOS, clipboard copy
 if has('mac')
@@ -81,11 +77,3 @@ nnoremap <leader>ct  :!/opt/homebrew/bin/ctags -R .<CR>
 inoremap <C-x>' `
 inoremap <C-x>- ~
 
-
-" at_coder_friends
-nnoremap [ACFCMD] <nop>
-
-nmap     <leader>ac [ACFCMD]
-nnoremap [ACFCMD]t :! at_coder_friends test-all % <CR>
-nnoremap [ACFCMD]g :! at_coder_friends check-and-go % <CR>
-nnoremap [ACFCMD]s :! at_coder_friends submit % <CR>

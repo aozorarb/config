@@ -37,9 +37,9 @@ nmap _ge ge
 # [[plugins]]
 # repo = 'tpope/vim-obsession'
 
-[[plugins]]
-repo = 'lambdalisue/vim-guise'
-on_event = 'CursorHold'
+# [[plugins]]
+# repo = 'lambdalisue/vim-guise'
+# on_event = 'CursorHold'
 
 [[plugins]]
 repo = 'vim-test/vim-test'
