@@ -12,7 +12,6 @@ on_source = 'vim-lsp'
 [[plugins]]
 repo = 'easymotion/vim-easymotion'
 on_event = 'CursorHold'
-hook_add = 'map - <Plug>(easymotion-prefix)'
 
 [[plugins]]
 repo = 'tpope/vim-surround'
@@ -70,3 +69,14 @@ on_ft = 'mercury'
 repo = 'tpope/vim-fugitive'
 on_event = 'VimEnter'
 hook_source = 'nnoremap <leader>gi <cmd>Git<CR>'
+
+# other
+
+[[plugins]]
+repo = 'vim-polyglot/vim-polyglot'
+on_event = 'VimEnter'
+
+[[plugins]]
+repo = 'cohamalexima.vim'
+on_event = 'VimEnter'
+
